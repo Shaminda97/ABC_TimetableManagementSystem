@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ABC_TimetableManagementSystem.LocationManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace ABC_TimetableManagementSystem
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void buttonLocation_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            locationManagement locationMang = new locationManagement();
+            locationMang.ShowDialog();
         }
     }
 }

@@ -117,6 +117,7 @@ namespace ABC_TimetableManagementSystem
             this.buttonLocation.Text = "Location Management";
             this.buttonLocation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonLocation.UseVisualStyleBackColor = true;
+            this.buttonLocation.Click += new System.EventHandler(this.buttonLocation_Click);
             // 
             // buttonTimetable
             // 
