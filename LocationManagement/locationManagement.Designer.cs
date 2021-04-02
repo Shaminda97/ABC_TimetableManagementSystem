@@ -29,28 +29,46 @@ namespace ABC_TimetableManagementSystem.LocationManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(locationManagement));
+            System.Windows.Forms.Label idLabel;
+            System.Windows.Forms.Label building_NameLabel;
+            System.Windows.Forms.Label room_NumberLabel;
+            System.Windows.Forms.Label capacityLabel;
+            System.Windows.Forms.Label roomTypeLabel1;
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.building_NameTextBox = new System.Windows.Forms.TextBox();
+            this.room_NumberTextBox = new System.Windows.Forms.TextBox();
+            this.capacityTextBox = new System.Windows.Forms.TextBox();
+            this.roomsTableDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aBC_databaseDataSet = new ABC_TimetableManagementSystem.ABC_databaseDataSet();
+            this.roomsTableTableAdapter = new ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.RoomsTableTableAdapter();
+            this.tableAdapterManager = new ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.TableAdapterManager();
+            this.roomTypeComboBox = new System.Windows.Forms.ComboBox();
+            idLabel = new System.Windows.Forms.Label();
+            building_NameLabel = new System.Windows.Forms.Label();
+            room_NumberLabel = new System.Windows.Forms.Label();
+            capacityLabel = new System.Windows.Forms.Label();
+            roomTypeLabel1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsTableDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_databaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,103 +81,18 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.label1.TabIndex = 0;
             this.label1.Text = "Add a new Lecture hall/ Lab";
             // 
-            // label2
+            // buttonSave
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Building Name";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(16, 126);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 26);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(16, 188);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 26);
-            this.textBox2.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 162);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Room Number";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 227);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Room type";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(16, 251);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 17);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Lecture Hall";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(16, 275);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(43, 17);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Lab";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 305);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Capacity";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(16, 328);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(119, 26);
-            this.textBox3.TabIndex = 9;
-            // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonUpdate.Location = new System.Drawing.Point(16, 374);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(87, 29);
-            this.buttonUpdate.TabIndex = 10;
-            this.buttonUpdate.Text = "Update";
-            this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonSave.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonSave.Location = new System.Drawing.Point(16, 374);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(87, 29);
+            this.buttonSave.TabIndex = 10;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonDelete
             // 
@@ -172,6 +105,7 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.buttonDelete.TabIndex = 11;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonAdd
             // 
@@ -184,14 +118,7 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.buttonAdd.TabIndex = 12;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(253, 126);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(524, 312);
-            this.dataGridView1.TabIndex = 13;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label6
             // 
@@ -213,13 +140,13 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.label7.TabIndex = 15;
             this.label7.Text = "Search Room";
             // 
-            // textBox4
+            // textBoxSearch
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(531, 94);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(119, 26);
-            this.textBox4.TabIndex = 16;
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.Location = new System.Drawing.Point(531, 94);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(119, 26);
+            this.textBoxSearch.TabIndex = 16;
             // 
             // buttonSearch
             // 
@@ -230,6 +157,7 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.buttonSearch.Size = new System.Drawing.Size(38, 28);
             this.buttonSearch.TabIndex = 17;
             this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // buttonRefresh
             // 
@@ -243,40 +171,211 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             // buttonBack
             // 
             this.buttonBack.Image = ((System.Drawing.Image)(resources.GetObject("buttonBack.Image")));
-            this.buttonBack.Location = new System.Drawing.Point(10, 9);
+            this.buttonBack.Location = new System.Drawing.Point(1, 2);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(33, 34);
             this.buttonBack.TabIndex = 19;
             this.buttonBack.UseVisualStyleBackColor = true;
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(18, 88);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(27, 20);
+            idLabel.TabIndex = 21;
+            idLabel.Text = "Id:";
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsTableBindingSource, "Id", true));
+            this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idTextBox.Location = new System.Drawing.Point(51, 85);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
+            this.idTextBox.Size = new System.Drawing.Size(52, 26);
+            this.idTextBox.TabIndex = 22;
+            // 
+            // building_NameLabel
+            // 
+            building_NameLabel.AutoSize = true;
+            building_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            building_NameLabel.Location = new System.Drawing.Point(18, 117);
+            building_NameLabel.Name = "building_NameLabel";
+            building_NameLabel.Size = new System.Drawing.Size(115, 20);
+            building_NameLabel.TabIndex = 23;
+            building_NameLabel.Text = "Building Name:";
+            // 
+            // building_NameTextBox
+            // 
+            this.building_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsTableBindingSource, "Building_Name", true));
+            this.building_NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.building_NameTextBox.Location = new System.Drawing.Point(21, 140);
+            this.building_NameTextBox.Name = "building_NameTextBox";
+            this.building_NameTextBox.Size = new System.Drawing.Size(172, 26);
+            this.building_NameTextBox.TabIndex = 24;
+            // 
+            // room_NumberLabel
+            // 
+            room_NumberLabel.AutoSize = true;
+            room_NumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            room_NumberLabel.Location = new System.Drawing.Point(18, 169);
+            room_NumberLabel.Name = "room_NumberLabel";
+            room_NumberLabel.Size = new System.Drawing.Size(116, 20);
+            room_NumberLabel.TabIndex = 25;
+            room_NumberLabel.Text = "Room Number:";
+            // 
+            // room_NumberTextBox
+            // 
+            this.room_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsTableBindingSource, "Room_Number", true));
+            this.room_NumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.room_NumberTextBox.Location = new System.Drawing.Point(21, 192);
+            this.room_NumberTextBox.Name = "room_NumberTextBox";
+            this.room_NumberTextBox.Size = new System.Drawing.Size(172, 26);
+            this.room_NumberTextBox.TabIndex = 26;
+            // 
+            // capacityLabel
+            // 
+            capacityLabel.AutoSize = true;
+            capacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            capacityLabel.Location = new System.Drawing.Point(20, 297);
+            capacityLabel.Name = "capacityLabel";
+            capacityLabel.Size = new System.Drawing.Size(74, 20);
+            capacityLabel.TabIndex = 29;
+            capacityLabel.Text = "Capacity:";
+            // 
+            // capacityTextBox
+            // 
+            this.capacityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsTableBindingSource, "Capacity", true));
+            this.capacityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.capacityTextBox.Location = new System.Drawing.Point(22, 321);
+            this.capacityTextBox.Name = "capacityTextBox";
+            this.capacityTextBox.Size = new System.Drawing.Size(100, 26);
+            this.capacityTextBox.TabIndex = 30;
+            // 
+            // roomsTableDataGridView
+            // 
+            this.roomsTableDataGridView.AutoGenerateColumns = false;
+            this.roomsTableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.roomsTableDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.roomsTableDataGridView.DataSource = this.roomsTableBindingSource;
+            this.roomsTableDataGridView.Location = new System.Drawing.Point(235, 128);
+            this.roomsTableDataGridView.Name = "roomsTableDataGridView";
+            this.roomsTableDataGridView.Size = new System.Drawing.Size(542, 310);
+            this.roomsTableDataGridView.TabIndex = 30;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Building_Name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Building_Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Room_Number";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Room_Number";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "RoomType";
+            this.dataGridViewTextBoxColumn4.HeaderText = "RoomType";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Capacity";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Capacity";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // roomsTableBindingSource
+            // 
+            this.roomsTableBindingSource.DataMember = "RoomsTable";
+            this.roomsTableBindingSource.DataSource = this.aBC_databaseDataSet;
+            // 
+            // aBC_databaseDataSet
+            // 
+            this.aBC_databaseDataSet.DataSetName = "ABC_databaseDataSet";
+            this.aBC_databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomsTableTableAdapter
+            // 
+            this.roomsTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.RoomsTableTableAdapter = this.roomsTableTableAdapter;
+            this.tableAdapterManager.UpdateOrder = ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // roomTypeLabel1
+            // 
+            roomTypeLabel1.AutoSize = true;
+            roomTypeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            roomTypeLabel1.Location = new System.Drawing.Point(20, 230);
+            roomTypeLabel1.Name = "roomTypeLabel1";
+            roomTypeLabel1.Size = new System.Drawing.Size(94, 20);
+            roomTypeLabel1.TabIndex = 30;
+            roomTypeLabel1.Text = "Room Type:";
+            // 
+            // roomTypeComboBox
+            // 
+            this.roomTypeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsTableBindingSource, "RoomType", true));
+            this.roomTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomTypeComboBox.FormattingEnabled = true;
+            this.roomTypeComboBox.Items.AddRange(new object[] {
+            "Lecture Hall",
+            "Lab"});
+            this.roomTypeComboBox.Location = new System.Drawing.Point(16, 253);
+            this.roomTypeComboBox.Name = "roomTypeComboBox";
+            this.roomTypeComboBox.Size = new System.Drawing.Size(121, 28);
+            this.roomTypeComboBox.TabIndex = 31;
+            // 
             // locationManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(808, 460);
+            this.Controls.Add(roomTypeLabel1);
+            this.Controls.Add(this.roomTypeComboBox);
+            this.Controls.Add(this.roomsTableDataGridView);
+            this.Controls.Add(idLabel);
+            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(building_NameLabel);
+            this.Controls.Add(this.building_NameTextBox);
+            this.Controls.Add(room_NumberLabel);
+            this.Controls.Add(this.room_NumberTextBox);
+            this.Controls.Add(capacityLabel);
+            this.Controls.Add(this.capacityTextBox);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonSearch);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.buttonUpdate);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label1);
             this.Name = "locationManagement";
             this.Text = "locationManagement";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.locationManagement_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.roomsTableDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_databaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,24 +384,29 @@ namespace ABC_TimetableManagementSystem.LocationManagement
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonBack;
+        private ABC_databaseDataSet aBC_databaseDataSet;
+        private System.Windows.Forms.BindingSource roomsTableBindingSource;
+        private ABC_databaseDataSetTableAdapters.RoomsTableTableAdapter roomsTableTableAdapter;
+        private ABC_databaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox building_NameTextBox;
+        private System.Windows.Forms.TextBox room_NumberTextBox;
+        private System.Windows.Forms.TextBox capacityTextBox;
+        private System.Windows.Forms.DataGridView roomsTableDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ComboBox roomTypeComboBox;
     }
 }
