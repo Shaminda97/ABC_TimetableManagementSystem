@@ -30,12 +30,12 @@ namespace ABC_TimetableManagementSystem.LocationManagement
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(locationManagement));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label building_NameLabel;
             System.Windows.Forms.Label room_NumberLabel;
             System.Windows.Forms.Label capacityLabel;
             System.Windows.Forms.Label roomTypeLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(locationManagement));
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -47,6 +47,8 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.idTextBox = new System.Windows.Forms.TextBox();
+            this.roomsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aBC_databaseDataSet = new ABC_TimetableManagementSystem.ABC_databaseDataSet();
             this.building_NameTextBox = new System.Windows.Forms.TextBox();
             this.room_NumberTextBox = new System.Windows.Forms.TextBox();
             this.capacityTextBox = new System.Windows.Forms.TextBox();
@@ -56,8 +58,6 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aBC_databaseDataSet = new ABC_TimetableManagementSystem.ABC_databaseDataSet();
             this.roomsTableTableAdapter = new ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.RoomsTableTableAdapter();
             this.tableAdapterManager = new ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.TableAdapterManager();
             this.roomTypeComboBox = new System.Windows.Forms.ComboBox();
@@ -66,10 +66,60 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             room_NumberLabel = new System.Windows.Forms.Label();
             capacityLabel = new System.Windows.Forms.Label();
             roomTypeLabel1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.roomsTableDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsTableDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(18, 88);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(27, 20);
+            idLabel.TabIndex = 21;
+            idLabel.Text = "Id:";
+            // 
+            // building_NameLabel
+            // 
+            building_NameLabel.AutoSize = true;
+            building_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            building_NameLabel.Location = new System.Drawing.Point(18, 117);
+            building_NameLabel.Name = "building_NameLabel";
+            building_NameLabel.Size = new System.Drawing.Size(115, 20);
+            building_NameLabel.TabIndex = 23;
+            building_NameLabel.Text = "Building Name:";
+            // 
+            // room_NumberLabel
+            // 
+            room_NumberLabel.AutoSize = true;
+            room_NumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            room_NumberLabel.Location = new System.Drawing.Point(18, 169);
+            room_NumberLabel.Name = "room_NumberLabel";
+            room_NumberLabel.Size = new System.Drawing.Size(116, 20);
+            room_NumberLabel.TabIndex = 25;
+            room_NumberLabel.Text = "Room Number:";
+            // 
+            // capacityLabel
+            // 
+            capacityLabel.AutoSize = true;
+            capacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            capacityLabel.Location = new System.Drawing.Point(20, 297);
+            capacityLabel.Name = "capacityLabel";
+            capacityLabel.Size = new System.Drawing.Size(74, 20);
+            capacityLabel.TabIndex = 29;
+            capacityLabel.Text = "Capacity:";
+            // 
+            // roomTypeLabel1
+            // 
+            roomTypeLabel1.AutoSize = true;
+            roomTypeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            roomTypeLabel1.Location = new System.Drawing.Point(20, 230);
+            roomTypeLabel1.Name = "roomTypeLabel1";
+            roomTypeLabel1.Size = new System.Drawing.Size(94, 20);
+            roomTypeLabel1.TabIndex = 30;
+            roomTypeLabel1.Text = "Room Type:";
             // 
             // label1
             // 
@@ -176,16 +226,7 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.buttonBack.Size = new System.Drawing.Size(33, 34);
             this.buttonBack.TabIndex = 19;
             this.buttonBack.UseVisualStyleBackColor = true;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(18, 88);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(27, 20);
-            idLabel.TabIndex = 21;
-            idLabel.Text = "Id:";
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // idTextBox
             // 
@@ -197,15 +238,15 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.idTextBox.Size = new System.Drawing.Size(52, 26);
             this.idTextBox.TabIndex = 22;
             // 
-            // building_NameLabel
+            // roomsTableBindingSource
             // 
-            building_NameLabel.AutoSize = true;
-            building_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            building_NameLabel.Location = new System.Drawing.Point(18, 117);
-            building_NameLabel.Name = "building_NameLabel";
-            building_NameLabel.Size = new System.Drawing.Size(115, 20);
-            building_NameLabel.TabIndex = 23;
-            building_NameLabel.Text = "Building Name:";
+            this.roomsTableBindingSource.DataMember = "RoomsTable";
+            this.roomsTableBindingSource.DataSource = this.aBC_databaseDataSet;
+            // 
+            // aBC_databaseDataSet
+            // 
+            this.aBC_databaseDataSet.DataSetName = "ABC_databaseDataSet";
+            this.aBC_databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // building_NameTextBox
             // 
@@ -216,16 +257,6 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.building_NameTextBox.Size = new System.Drawing.Size(172, 26);
             this.building_NameTextBox.TabIndex = 24;
             // 
-            // room_NumberLabel
-            // 
-            room_NumberLabel.AutoSize = true;
-            room_NumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            room_NumberLabel.Location = new System.Drawing.Point(18, 169);
-            room_NumberLabel.Name = "room_NumberLabel";
-            room_NumberLabel.Size = new System.Drawing.Size(116, 20);
-            room_NumberLabel.TabIndex = 25;
-            room_NumberLabel.Text = "Room Number:";
-            // 
             // room_NumberTextBox
             // 
             this.room_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsTableBindingSource, "Room_Number", true));
@@ -234,16 +265,6 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.room_NumberTextBox.Name = "room_NumberTextBox";
             this.room_NumberTextBox.Size = new System.Drawing.Size(172, 26);
             this.room_NumberTextBox.TabIndex = 26;
-            // 
-            // capacityLabel
-            // 
-            capacityLabel.AutoSize = true;
-            capacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            capacityLabel.Location = new System.Drawing.Point(20, 297);
-            capacityLabel.Name = "capacityLabel";
-            capacityLabel.Size = new System.Drawing.Size(74, 20);
-            capacityLabel.TabIndex = 29;
-            capacityLabel.Text = "Capacity:";
             // 
             // capacityTextBox
             // 
@@ -301,16 +322,6 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.dataGridViewTextBoxColumn5.HeaderText = "Capacity";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // roomsTableBindingSource
-            // 
-            this.roomsTableBindingSource.DataMember = "RoomsTable";
-            this.roomsTableBindingSource.DataSource = this.aBC_databaseDataSet;
-            // 
-            // aBC_databaseDataSet
-            // 
-            this.aBC_databaseDataSet.DataSetName = "ABC_databaseDataSet";
-            this.aBC_databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // roomsTableTableAdapter
             // 
             this.roomsTableTableAdapter.ClearBeforeFill = true;
@@ -320,16 +331,6 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.RoomsTableTableAdapter = this.roomsTableTableAdapter;
             this.tableAdapterManager.UpdateOrder = ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // roomTypeLabel1
-            // 
-            roomTypeLabel1.AutoSize = true;
-            roomTypeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            roomTypeLabel1.Location = new System.Drawing.Point(20, 230);
-            roomTypeLabel1.Name = "roomTypeLabel1";
-            roomTypeLabel1.Size = new System.Drawing.Size(94, 20);
-            roomTypeLabel1.TabIndex = 30;
-            roomTypeLabel1.Text = "Room Type:";
             // 
             // roomTypeComboBox
             // 
@@ -373,9 +374,9 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.Name = "locationManagement";
             this.Text = "locationManagement";
             this.Load += new System.EventHandler(this.locationManagement_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.roomsTableDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsTableDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -143,6 +143,7 @@ namespace ABC_TimetableManagementSystem
             this.buttonStat.TabIndex = 6;
             this.buttonStat.Text = "Statistics";
             this.buttonStat.UseVisualStyleBackColor = true;
+            this.buttonStat.Click += new System.EventHandler(this.buttonStat_Click);
             // 
             // Form1
             // 

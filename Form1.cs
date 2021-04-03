@@ -1,4 +1,6 @@
 ﻿using ABC_TimetableManagementSystem.LocationManagement;
+using ABC_TimetableManagementSystem.Statistics;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +22,17 @@ namespace ABC_TimetableManagementSystem
 
         private void buttonLocation_Click(object sender, EventArgs e)
         {
+            //navigate to the location management
             this.Hide();
             locationManagement locationMang = new locationManagement();
             locationMang.ShowDialog();
+        }
+
+        private void buttonStat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            statistics stat = new statistics();
+            stat.ShowDialog();
         }
     }
 }

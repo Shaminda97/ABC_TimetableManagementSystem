@@ -63,7 +63,12 @@ namespace ABC_TimetableManagementSystem.LocationManagement
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
-       
-       
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+        }
     }
 }

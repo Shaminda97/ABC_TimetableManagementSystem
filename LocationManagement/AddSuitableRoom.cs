@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ABC_TimetableManagementSystem.LocationManagement
 {
-    public partial class AddSuitableRoom : Form
+    public partial class addSuitableRoom : Form
     {
-        public AddSuitableRoom()
+        public addSuitableRoom()
         {
             InitializeComponent();
         }

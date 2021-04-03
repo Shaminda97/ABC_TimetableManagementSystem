@@ -120,17 +120,20 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAIiSURBVEhLpZXNTttAEMcXzqWvQj9egKvtgjhREC9Q2ncooSA+rrRrwyFwqMQF0SMHYqeQokqo
-        UouQECCgOFVLSKVWAiQ4QLzMbDZqvDt2TPqXfrLsnf2PvDu7w1pKiA6n6D61ffeV4/M3ts/n8Am87A3e
-        PVFR7clanX1o+e4YmJcBkULZLvBc32a+S03NJsv3hu3A/U0YplG1Az6kLJKVy+U6bd+bIQyyE/Ap9FGW
-        pv47wT8mlWVcconoCe0QOb43qKzrwk2DqjkjgmMMrOeFQ3wngT3F4lEp8C9kFdHBivfHWyKKIrHz95dw
-        Ao+MMQi80XoGOAfw4YcR0MTS9y+ioQgYKi2ScQQh+jN10KgASXMC1HL4lYxLZI0/YnhyyUFAT/ChvE3G
-        pRK4L5hV8CaowfzhZ2XdWrdRTRQrB4YHglcQcwLXpQbDyz/KIrv6i/OGD/oz+J1xfQCZ3VuXm9yss+sL
-        Ubk6NzgFVsrfDA8EKzd1T95qidZO97KXbwPcE7yuyUHF/MFmLNHqz10yLolnxblueVTg5UQfbEZPNLix
-        QMYRhDIBCvsBERCD75fETa0mPlWPyHEKuIJeqxSM9XzkD7LcXZnvrTpVo5FhwyEC2yWyC96Aso4Lym2a
-        mHBv8IArS1OyM0Jng8BIn5gRnDeZ2hkbsnz+PMseaVQSlyhJshigH8DkUDPTOcEqwng1tT3BGj8GRmRz
-        K7gePvFdXuMtxdgdrWtMKxX1fgoAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAiJJREFUSEul
+        lc1O20AQxxfOpa9CP16Aq+2COFEQL1DadyihID6utGvDIXCoxAXRIwdip5CiSqhSi5AQIKA4VUtIpVYC
+        JDhAvMxsNmq8O3ZM+pd+suyd/Y+8O7vDWkqIDqfoPrV995Xj8ze2z+fwCbzsDd49UVHtyVqdfWj57hiY
+        lwGRQtku8FzfZr5LTc0my/eG7cD9TRimUbUDPqQskpXL5Tpt35shDLIT8Cn0UZam/jvBPyaVZVxyiegJ
+        7RA5vjeorOvCTYOqOSOCYwys54VDfCeBPcXiUSnwL2QV0cGK98dbIooisfP3l3ACj4wxCLzRegY4B/Dh
+        hxHQxNL3L6KhCBgqLZJxBCH6M3XQqABJcwLUcviVjEtkjT9ieHLJQUBP8KG8TcalErgvmFXwJqjB/OFn
+        Zd1at1FNFCsHhgeCVxBzAtelBsPLP8oiu/qL84YP+jP4nXF9AJndW5eb3Kyz6wtRuTo3OAVWyt8MDwQr
+        N3VP3mqJ1k73spdvA9wTvK7JQcX8wWYs0erPXTIuiWfFuW55VODlRB9sRk80uLFAxhGEMgEK+wEREIPv
+        l8RNrSY+VY/IcQq4gl6rFIz1fOQPstxdme+tOlWjkWHDIQLbJbIL3oCyjgvKbZqYcG/wgCtLU7IzQmeD
+        wEifmBGcN5naGRuyfP48yx5pVBKXKEmyGKAfwORQM9M5wSrCeDW1PcEaPwZGZHMruB4+8V1e4y3F2B2t
+        a0wrFfV+CgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="abC_databaseDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
