@@ -40,26 +40,74 @@ namespace ABC_TimetableManagementSystem.Statistics
             chart1.Series["s1"].Points.AddXY("4th", forthYr);
             connection.Close();
 
-           //pieChart for years vs subjects
-            chart1.Titles.Add("Subjects");
-           /* connection.Open();
-            SqlCommand cmdS1 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE Acadamic Year & Sem= 'Y1S1' OR  Acadamic year & Sem= 'Y1S2' ", connection);
+            //pieChart for years vs student
+            chartStudent.Titles.Add("Students");
+            connection.Open();
+            SqlCommand cmdS1 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYearAndSem LIKE 'Y1%' ", connection);
             int firstYrStd = (int)cmdS1.ExecuteScalar();
 
-            SqlCommand cmdS2 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE Acadamic year & Sem= 'Y2S1' OR  Acadamic year & Sem= 'Y2S2'", connection);
+            SqlCommand cmdS2 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYearAndSem LIKE 'Y2%'", connection);
             int secondYrStd = (int)cmdS2.ExecuteScalar();
 
-            SqlCommand cmdS3 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHEREAcadamic year & Sem= 'Y3S1' OR  Acadamic year & Sem= 'Y3S2'", connection);
+            SqlCommand cmdS3 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYearAndSem LIKE 'Y3%'", connection);
             int thirdYrStd = (int)cmdS3.ExecuteScalar();
 
-            SqlCommand cmdS4 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE Acadamic year & Sem= 'Y4S1' OR  Acadamic year & Sem= 'Y4S2'", connection);
+            SqlCommand cmdS4 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYearAndSem LIKE 'Y4%'", connection);
             int forthYrStd = (int)cmdS4.ExecuteScalar();
 
-            chart1.Series["s2"].Points.AddXY("1st", firstYrStd);
-            chart1.Series["s2"].Points.AddXY("2nd", secondYrStd);
-            chart1.Series["s2"].Points.AddXY("3rd", thirdYrStd);
-            chart1.Series["s2"].Points.AddXY("4th", forthYrStd);
-            connection.Close();*/
+            chartStudent.Series["s2"].Points.AddXY("1st", firstYrStd);
+            chartStudent.Series["s2"].Points.AddXY("2nd", secondYrStd);
+            chartStudent.Series["s2"].Points.AddXY("3rd", thirdYrStd);
+            chartStudent.Series["s2"].Points.AddXY("4th", forthYrStd);
+            connection.Close();
+
+
+            //pieChart for lecturers vs ranking
+            chartLect.Titles.Add("Lecturers");
+            connection.Open();
+            SqlCommand cmdc1 = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] WHERE Level= 1", connection);
+            int lvl1 = (int)cmdc1.ExecuteScalar();
+
+            SqlCommand cmdc2 = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] WHERE Level= 2", connection);
+            int lvl2 = (int)cmdc2.ExecuteScalar();
+
+            SqlCommand cmdc3 = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] WHERE Level= 3", connection);
+            int lvl3 = (int)cmdc3.ExecuteScalar();
+
+            SqlCommand cmcd4 = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] WHERE Level= 4", connection);
+            int lvl4 = (int)cmcd4.ExecuteScalar();
+
+            SqlCommand cmcd5 = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] WHERE Level= 5", connection);
+            int lvl5 = (int)cmcd5.ExecuteScalar();
+
+            SqlCommand cmcd6 = new SqlCommand("SELECT COUNT (*) FROM[LecturerTable] WHERE Level= 6", connection);
+            int lvl6 = (int)cmcd6.ExecuteScalar();
+
+            chartLect.Series["s1"].Points.AddXY("Prof", lvl1);
+            chartLect.Series["s1"].Points.AddXY("As.Prof", lvl2);
+            chartLect.Series["s1"].Points.AddXY("Se.Lec(HG)", lvl3);
+            chartLect.Series["s1"].Points.AddXY("Se.Lec", lvl4);
+            chartLect.Series["s1"].Points.AddXY("Lec", lvl5);
+            chartLect.Series["s1"].Points.AddXY("As.Lec", lvl6);
+            connection.Close();
+
+            //Total Lecturer
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] ", connection);
+            textBoxTotLec.Text = cmd.ExecuteScalar().ToString();
+            connection.Close();
+
+            //Total Subject
+            connection.Open();
+            SqlCommand cmdTotSubj = new SqlCommand("SELECT COUNT (*) FROM [SubjectTable] ", connection);
+            textBoxTotSubj.Text = cmdTotSubj.ExecuteScalar().ToString();
+            connection.Close();
+
+            //Total Student
+            connection.Open();
+            SqlCommand cmdTotStu = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] ", connection);
+            textBoxTotStudent.Text = cmdTotStu.ExecuteScalar().ToString();
+            connection.Close();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

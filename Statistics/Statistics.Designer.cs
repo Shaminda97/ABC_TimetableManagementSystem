@@ -69,10 +69,10 @@ namespace ABC_TimetableManagementSystem.Statistics
             this.label15 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBoxTotStudent = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTotSubj = new System.Windows.Forms.TextBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.abC_databaseDataSet1 = new ABC_TimetableManagementSystem.ABC_databaseDataSet();
             this.chartStudent = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -108,6 +108,7 @@ namespace ABC_TimetableManagementSystem.Statistics
             this.textBoxTotLec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTotLec.Location = new System.Drawing.Point(151, 105);
             this.textBoxTotLec.Name = "textBoxTotLec";
+            this.textBoxTotLec.ReadOnly = true;
             this.textBoxTotLec.Size = new System.Drawing.Size(106, 29);
             this.textBoxTotLec.TabIndex = 2;
             // 
@@ -355,13 +356,14 @@ namespace ABC_TimetableManagementSystem.Statistics
             this.label16.TabIndex = 25;
             this.label16.Text = "1st Year";
             // 
-            // textBox16
+            // textBoxTotStudent
             // 
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(672, 105);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(106, 29);
-            this.textBox16.TabIndex = 24;
+            this.textBoxTotStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTotStudent.Location = new System.Drawing.Point(672, 105);
+            this.textBoxTotStudent.Name = "textBoxTotStudent";
+            this.textBoxTotStudent.ReadOnly = true;
+            this.textBoxTotStudent.Size = new System.Drawing.Size(106, 29);
+            this.textBoxTotStudent.TabIndex = 24;
             // 
             // label17
             // 
@@ -383,13 +385,14 @@ namespace ABC_TimetableManagementSystem.Statistics
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // textBox1
+            // textBoxTotSubj
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(418, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(106, 29);
-            this.textBox1.TabIndex = 34;
+            this.textBoxTotSubj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTotSubj.Location = new System.Drawing.Point(418, 102);
+            this.textBoxTotSubj.Name = "textBoxTotSubj";
+            this.textBoxTotSubj.ReadOnly = true;
+            this.textBoxTotSubj.Size = new System.Drawing.Size(106, 29);
+            this.textBoxTotSubj.TabIndex = 34;
             // 
             // chart1
             // 
@@ -401,6 +404,7 @@ namespace ABC_TimetableManagementSystem.Statistics
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.IsValueShownAsLabel = true;
             series1.Legend = "Legend1";
             series1.Name = "s1";
             this.chart1.Series.Add(series1);
@@ -423,6 +427,7 @@ namespace ABC_TimetableManagementSystem.Statistics
             this.chartStudent.Name = "chartStudent";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.IsValueShownAsLabel = true;
             series2.Legend = "Legend1";
             series2.Name = "s2";
             this.chartStudent.Series.Add(series2);
@@ -440,6 +445,7 @@ namespace ABC_TimetableManagementSystem.Statistics
             this.chartLect.Name = "chartLect";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.IsValueShownAsLabel = true;
             series3.Legend = "Legend1";
             series3.Name = "s1";
             this.chartLect.Series.Add(series3);
@@ -455,7 +461,7 @@ namespace ABC_TimetableManagementSystem.Statistics
             this.Controls.Add(this.chartLect);
             this.Controls.Add(this.chartStudent);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTotSubj);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label13);
@@ -465,7 +471,7 @@ namespace ABC_TimetableManagementSystem.Statistics
             this.Controls.Add(this.label15);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.textBoxTotStudent);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.label12);
@@ -532,11 +538,11 @@ namespace ABC_TimetableManagementSystem.Statistics
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBoxTotStudent;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button buttonBack;
         private ABC_databaseDataSet abC_databaseDataSet1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTotSubj;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartStudent;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartLect;
