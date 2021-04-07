@@ -30,23 +30,23 @@ namespace ABC_TimetableManagementSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label idLabel;
-            System.Windows.Forms.Label acadamic_Year___SemLabel;
-            System.Windows.Forms.Label programmeLabel;
-            System.Windows.Forms.Label group_NoLabel;
-            System.Windows.Forms.Label group_IDLabel;
-            System.Windows.Forms.Label subGroupLabel;
+            System.Windows.Forms.Label idLabel1;
+            System.Windows.Forms.Label acadamic_Year_Label;
+            System.Windows.Forms.Label semesterLabel;
+            System.Windows.Forms.Label programLabel;
+            System.Windows.Forms.Label group_NoLabel1;
+            System.Windows.Forms.Label sub_Group_NoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.aBC_databaseDataSet = new ABC_TimetableManagementSystem.ABC_databaseDataSet();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.studentTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aBC_databaseDataSet = new ABC_TimetableManagementSystem.ABC_databaseDataSet();
             this.studentTableTableAdapter = new ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.StudentTableTableAdapter();
             this.tableAdapterManager = new ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.TableAdapterManager();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.acadamic_Year___SemNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.programmeTextBox = new System.Windows.Forms.TextBox();
-            this.group_NoNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.group_IDNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.subGroupNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.studentTableDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,221 +54,30 @@ namespace ABC_TimetableManagementSystem
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            idLabel = new System.Windows.Forms.Label();
-            acadamic_Year___SemLabel = new System.Windows.Forms.Label();
-            programmeLabel = new System.Windows.Forms.Label();
-            group_NoLabel = new System.Windows.Forms.Label();
-            group_IDLabel = new System.Windows.Forms.Label();
-            subGroupLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.aBC_databaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acadamic_Year___SemNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.group_NoNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.group_IDNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subGroupNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTableDataGridView)).BeginInit();
+            this.IDTb = new System.Windows.Forms.TextBox();
+            this.acadamic_Year_TextBox = new System.Windows.Forms.TextBox();
+            this.semesterNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.programTextBox = new System.Windows.Forms.TextBox();
+            this.group_NoTextBox = new System.Windows.Forms.TextBox();
+            this.sub_Group_NoTextBox = new System.Windows.Forms.TextBox();
+            idLabel1 = new System.Windows.Forms.Label();
+            acadamic_Year_Label = new System.Windows.Forms.Label();
+            semesterLabel = new System.Windows.Forms.Label();
+            programLabel = new System.Windows.Forms.Label();
+            group_NoLabel1 = new System.Windows.Forms.Label();
+            sub_Group_NoLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTableDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semesterNumericUpDown)).BeginInit();
             this.SuspendLayout();
-            // 
-            // aBC_databaseDataSet
-            // 
-            this.aBC_databaseDataSet.DataSetName = "ABC_databaseDataSet";
-            this.aBC_databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentTableBindingSource
-            // 
-            this.studentTableBindingSource.DataMember = "StudentTable";
-            this.studentTableBindingSource.DataSource = this.aBC_databaseDataSet;
-            // 
-            // studentTableTableAdapter
-            // 
-            this.studentTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.LecturerTableTableAdapter = null;
-            this.tableAdapterManager.RoomsTableTableAdapter = null;
-            this.tableAdapterManager.StudentTableTableAdapter = this.studentTableTableAdapter;
-            this.tableAdapterManager.SubjectTableTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(244, 139);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(23, 17);
-            idLabel.TabIndex = 1;
-            idLabel.Text = "Id:";
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentTableBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(393, 136);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(243, 22);
-            this.idTextBox.TabIndex = 2;
-            // 
-            // acadamic_Year___SemLabel
-            // 
-            acadamic_Year___SemLabel.AutoSize = true;
-            acadamic_Year___SemLabel.Location = new System.Drawing.Point(244, 164);
-            acadamic_Year___SemLabel.Name = "acadamic_Year___SemLabel";
-            acadamic_Year___SemLabel.Size = new System.Drawing.Size(143, 17);
-            acadamic_Year___SemLabel.TabIndex = 3;
-            acadamic_Year___SemLabel.Text = "Acadamic Year & Sem:";
-            // 
-            // acadamic_Year___SemNumericUpDown
-            // 
-            this.acadamic_Year___SemNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.studentTableBindingSource, "Acadamic Year & Sem", true));
-            this.acadamic_Year___SemNumericUpDown.Location = new System.Drawing.Point(393, 164);
-            this.acadamic_Year___SemNumericUpDown.Name = "acadamic_Year___SemNumericUpDown";
-            this.acadamic_Year___SemNumericUpDown.Size = new System.Drawing.Size(243, 22);
-            this.acadamic_Year___SemNumericUpDown.TabIndex = 4;
-            // 
-            // programmeLabel
-            // 
-            programmeLabel.AutoSize = true;
-            programmeLabel.Location = new System.Drawing.Point(244, 195);
-            programmeLabel.Name = "programmeLabel";
-            programmeLabel.Size = new System.Drawing.Size(84, 17);
-            programmeLabel.TabIndex = 5;
-            programmeLabel.Text = "programme:";
-            // 
-            // programmeTextBox
-            // 
-            this.programmeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentTableBindingSource, "programme", true));
-            this.programmeTextBox.Location = new System.Drawing.Point(393, 192);
-            this.programmeTextBox.Name = "programmeTextBox";
-            this.programmeTextBox.Size = new System.Drawing.Size(243, 22);
-            this.programmeTextBox.TabIndex = 6;
-            // 
-            // group_NoLabel
-            // 
-            group_NoLabel.AutoSize = true;
-            group_NoLabel.Location = new System.Drawing.Point(244, 220);
-            group_NoLabel.Name = "group_NoLabel";
-            group_NoLabel.Size = new System.Drawing.Size(74, 17);
-            group_NoLabel.TabIndex = 7;
-            group_NoLabel.Text = "Group No:";
-            // 
-            // group_NoNumericUpDown
-            // 
-            this.group_NoNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.studentTableBindingSource, "Group No", true));
-            this.group_NoNumericUpDown.Location = new System.Drawing.Point(393, 220);
-            this.group_NoNumericUpDown.Name = "group_NoNumericUpDown";
-            this.group_NoNumericUpDown.Size = new System.Drawing.Size(243, 22);
-            this.group_NoNumericUpDown.TabIndex = 8;
-            // 
-            // group_IDLabel
-            // 
-            group_IDLabel.AutoSize = true;
-            group_IDLabel.Location = new System.Drawing.Point(244, 248);
-            group_IDLabel.Name = "group_IDLabel";
-            group_IDLabel.Size = new System.Drawing.Size(69, 17);
-            group_IDLabel.TabIndex = 9;
-            group_IDLabel.Text = "Group ID:";
-            // 
-            // group_IDNumericUpDown
-            // 
-            this.group_IDNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.studentTableBindingSource, "Group ID", true));
-            this.group_IDNumericUpDown.Location = new System.Drawing.Point(393, 248);
-            this.group_IDNumericUpDown.Name = "group_IDNumericUpDown";
-            this.group_IDNumericUpDown.Size = new System.Drawing.Size(243, 22);
-            this.group_IDNumericUpDown.TabIndex = 10;
-            // 
-            // subGroupLabel
-            // 
-            subGroupLabel.AutoSize = true;
-            subGroupLabel.Location = new System.Drawing.Point(244, 276);
-            subGroupLabel.Name = "subGroupLabel";
-            subGroupLabel.Size = new System.Drawing.Size(81, 17);
-            subGroupLabel.TabIndex = 11;
-            subGroupLabel.Text = "Sub Group:";
-            // 
-            // subGroupNumericUpDown
-            // 
-            this.subGroupNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.studentTableBindingSource, "SubGroup", true));
-            this.subGroupNumericUpDown.Location = new System.Drawing.Point(393, 276);
-            this.subGroupNumericUpDown.Name = "subGroupNumericUpDown";
-            this.subGroupNumericUpDown.Size = new System.Drawing.Size(243, 22);
-            this.subGroupNumericUpDown.TabIndex = 12;
-            // 
-            // studentTableDataGridView
-            // 
-            this.studentTableDataGridView.AutoGenerateColumns = false;
-            this.studentTableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.studentTableDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.studentTableDataGridView.DataSource = this.studentTableBindingSource;
-            this.studentTableDataGridView.Location = new System.Drawing.Point(664, 136);
-            this.studentTableDataGridView.Name = "studentTableDataGridView";
-            this.studentTableDataGridView.RowHeadersWidth = 51;
-            this.studentTableDataGridView.RowTemplate.Height = 24;
-            this.studentTableDataGridView.Size = new System.Drawing.Size(791, 557);
-            this.studentTableDataGridView.TabIndex = 13;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Acadamic Year & Sem";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Acadamic Year & Sem";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "programme";
-            this.dataGridViewTextBoxColumn3.HeaderText = "programme";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Group No";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Group No";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Group ID";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Group ID";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "SubGroup";
-            this.dataGridViewTextBoxColumn6.HeaderText = "SubGroup";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1459, 65);
@@ -286,39 +95,278 @@ namespace ABC_TimetableManagementSystem
             this.label1.Text = "Student Group Management";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 48);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Home";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Blue;
+            this.button2.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(338, 356);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 51);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Blue;
+            this.button3.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(435, 499);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(124, 51);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Blue;
+            this.button4.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(239, 499);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(124, 51);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "Edit";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // studentTableBindingSource
+            // 
+            this.studentTableBindingSource.DataMember = "StudentTable";
+            this.studentTableBindingSource.DataSource = this.aBC_databaseDataSet;
+            // 
+            // aBC_databaseDataSet
+            // 
+            this.aBC_databaseDataSet.DataSetName = "ABC_databaseDataSet";
+            this.aBC_databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentTableTableAdapter
+            // 
+            this.studentTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.LecturerTableTableAdapter = null;
+            this.tableAdapterManager.RoomsTableTableAdapter = null;
+            this.tableAdapterManager.StudentTableTableAdapter = this.studentTableTableAdapter;
+            this.tableAdapterManager.SubjectTableTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // studentTableDataGridView
+            // 
+            this.studentTableDataGridView.AutoGenerateColumns = false;
+            this.studentTableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.studentTableDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.studentTableDataGridView.DataSource = this.studentTableBindingSource;
+            this.studentTableDataGridView.Location = new System.Drawing.Point(678, 109);
+            this.studentTableDataGridView.Name = "studentTableDataGridView";
+            this.studentTableDataGridView.RowHeadersWidth = 51;
+            this.studentTableDataGridView.RowTemplate.Height = 24;
+            this.studentTableDataGridView.Size = new System.Drawing.Size(793, 593);
+            this.studentTableDataGridView.TabIndex = 18;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Acadamic Year ";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Acadamic Year ";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Semester";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Semester";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Program";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Program";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Group No";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Group No";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Sub Group No";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Sub Group No";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // idLabel1
+            // 
+            idLabel1.AutoSize = true;
+            idLabel1.Location = new System.Drawing.Point(260, 112);
+            idLabel1.Name = "idLabel1";
+            idLabel1.Size = new System.Drawing.Size(23, 17);
+            idLabel1.TabIndex = 18;
+            idLabel1.Text = "Id:";
+            // 
+            // IDTb
+            // 
+            this.IDTb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentTableBindingSource, "Id", true));
+            this.IDTb.Location = new System.Drawing.Point(377, 109);
+            this.IDTb.Name = "IDTb";
+            this.IDTb.Size = new System.Drawing.Size(212, 22);
+            this.IDTb.TabIndex = 19;
+            // 
+            // acadamic_Year_Label
+            // 
+            acadamic_Year_Label.AutoSize = true;
+            acadamic_Year_Label.Location = new System.Drawing.Point(260, 140);
+            acadamic_Year_Label.Name = "acadamic_Year_Label";
+            acadamic_Year_Label.Size = new System.Drawing.Size(111, 17);
+            acadamic_Year_Label.TabIndex = 20;
+            acadamic_Year_Label.Text = "Acadamic Year :";
+            // 
+            // acadamic_Year_TextBox
+            // 
+            this.acadamic_Year_TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentTableBindingSource, "Acadamic Year ", true));
+            this.acadamic_Year_TextBox.Location = new System.Drawing.Point(377, 137);
+            this.acadamic_Year_TextBox.Name = "acadamic_Year_TextBox";
+            this.acadamic_Year_TextBox.Size = new System.Drawing.Size(212, 22);
+            this.acadamic_Year_TextBox.TabIndex = 21;
+            // 
+            // semesterLabel
+            // 
+            semesterLabel.AutoSize = true;
+            semesterLabel.Location = new System.Drawing.Point(260, 165);
+            semesterLabel.Name = "semesterLabel";
+            semesterLabel.Size = new System.Drawing.Size(72, 17);
+            semesterLabel.TabIndex = 22;
+            semesterLabel.Text = "Semester:";
+            // 
+            // semesterNumericUpDown
+            // 
+            this.semesterNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.studentTableBindingSource, "Semester", true));
+            this.semesterNumericUpDown.Location = new System.Drawing.Point(377, 165);
+            this.semesterNumericUpDown.Name = "semesterNumericUpDown";
+            this.semesterNumericUpDown.Size = new System.Drawing.Size(212, 22);
+            this.semesterNumericUpDown.TabIndex = 23;
+            // 
+            // programLabel
+            // 
+            programLabel.AutoSize = true;
+            programLabel.Location = new System.Drawing.Point(260, 196);
+            programLabel.Name = "programLabel";
+            programLabel.Size = new System.Drawing.Size(66, 17);
+            programLabel.TabIndex = 24;
+            programLabel.Text = "Program:";
+            // 
+            // programTextBox
+            // 
+            this.programTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentTableBindingSource, "Program", true));
+            this.programTextBox.Location = new System.Drawing.Point(377, 193);
+            this.programTextBox.Name = "programTextBox";
+            this.programTextBox.Size = new System.Drawing.Size(212, 22);
+            this.programTextBox.TabIndex = 25;
+            // 
+            // group_NoLabel1
+            // 
+            group_NoLabel1.AutoSize = true;
+            group_NoLabel1.Location = new System.Drawing.Point(260, 224);
+            group_NoLabel1.Name = "group_NoLabel1";
+            group_NoLabel1.Size = new System.Drawing.Size(74, 17);
+            group_NoLabel1.TabIndex = 26;
+            group_NoLabel1.Text = "Group No:";
+            // 
+            // group_NoTextBox
+            // 
+            this.group_NoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentTableBindingSource, "Group No", true));
+            this.group_NoTextBox.Location = new System.Drawing.Point(377, 221);
+            this.group_NoTextBox.Name = "group_NoTextBox";
+            this.group_NoTextBox.Size = new System.Drawing.Size(212, 22);
+            this.group_NoTextBox.TabIndex = 27;
+            // 
+            // sub_Group_NoLabel
+            // 
+            sub_Group_NoLabel.AutoSize = true;
+            sub_Group_NoLabel.Location = new System.Drawing.Point(260, 252);
+            sub_Group_NoLabel.Name = "sub_Group_NoLabel";
+            sub_Group_NoLabel.Size = new System.Drawing.Size(103, 17);
+            sub_Group_NoLabel.TabIndex = 28;
+            sub_Group_NoLabel.Text = "Sub Group No:";
+            // 
+            // sub_Group_NoTextBox
+            // 
+            this.sub_Group_NoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentTableBindingSource, "Sub Group No", true));
+            this.sub_Group_NoTextBox.Location = new System.Drawing.Point(377, 249);
+            this.sub_Group_NoTextBox.Name = "sub_Group_NoTextBox";
+            this.sub_Group_NoTextBox.Size = new System.Drawing.Size(212, 22);
+            this.sub_Group_NoTextBox.TabIndex = 29;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1483, 739);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1491, 739);
+            this.Controls.Add(idLabel1);
+            this.Controls.Add(this.IDTb);
+            this.Controls.Add(acadamic_Year_Label);
+            this.Controls.Add(this.acadamic_Year_TextBox);
+            this.Controls.Add(semesterLabel);
+            this.Controls.Add(this.semesterNumericUpDown);
+            this.Controls.Add(programLabel);
+            this.Controls.Add(this.programTextBox);
+            this.Controls.Add(group_NoLabel1);
+            this.Controls.Add(this.group_NoTextBox);
+            this.Controls.Add(sub_Group_NoLabel);
+            this.Controls.Add(this.sub_Group_NoTextBox);
             this.Controls.Add(this.studentTableDataGridView);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
-            this.Controls.Add(acadamic_Year___SemLabel);
-            this.Controls.Add(this.acadamic_Year___SemNumericUpDown);
-            this.Controls.Add(programmeLabel);
-            this.Controls.Add(this.programmeTextBox);
-            this.Controls.Add(group_NoLabel);
-            this.Controls.Add(this.group_NoNumericUpDown);
-            this.Controls.Add(group_IDLabel);
-            this.Controls.Add(this.group_IDNumericUpDown);
-            this.Controls.Add(subGroupLabel);
-            this.Controls.Add(this.subGroupNumericUpDown);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.panel1);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.aBC_databaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acadamic_Year___SemNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.group_NoNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.group_IDNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subGroupNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTableDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTableDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semesterNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,12 +378,12 @@ namespace ABC_TimetableManagementSystem
         private System.Windows.Forms.BindingSource studentTableBindingSource;
         private ABC_databaseDataSetTableAdapters.StudentTableTableAdapter studentTableTableAdapter;
         private ABC_databaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.NumericUpDown acadamic_Year___SemNumericUpDown;
-        private System.Windows.Forms.TextBox programmeTextBox;
-        private System.Windows.Forms.NumericUpDown group_NoNumericUpDown;
-        private System.Windows.Forms.NumericUpDown group_IDNumericUpDown;
-        private System.Windows.Forms.NumericUpDown subGroupNumericUpDown;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView studentTableDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -343,7 +391,11 @@ namespace ABC_TimetableManagementSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox IDTb;
+        private System.Windows.Forms.TextBox acadamic_Year_TextBox;
+        private System.Windows.Forms.NumericUpDown semesterNumericUpDown;
+        private System.Windows.Forms.TextBox programTextBox;
+        private System.Windows.Forms.TextBox group_NoTextBox;
+        private System.Windows.Forms.TextBox sub_Group_NoTextBox;
     }
 }

@@ -1084,15 +1084,15 @@ namespace ABC_TimetableManagementSystem {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn _columnAcadamic_Year___Sem;
+            private global::System.Data.DataColumn columnAcadamic_Year_;
             
-            private global::System.Data.DataColumn columnprogramme;
+            private global::System.Data.DataColumn columnSemester;
+            
+            private global::System.Data.DataColumn columnProgram;
             
             private global::System.Data.DataColumn columnGroup_No;
             
-            private global::System.Data.DataColumn columnGroup_ID;
-            
-            private global::System.Data.DataColumn columnSubGroup;
+            private global::System.Data.DataColumn columnSub_Group_No;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1137,17 +1137,25 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn _Acadamic_Year___SemColumn {
+            public global::System.Data.DataColumn Acadamic_Year_Column {
                 get {
-                    return this._columnAcadamic_Year___Sem;
+                    return this.columnAcadamic_Year_;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn programmeColumn {
+            public global::System.Data.DataColumn SemesterColumn {
                 get {
-                    return this.columnprogramme;
+                    return this.columnSemester;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ProgramColumn {
+                get {
+                    return this.columnProgram;
                 }
             }
             
@@ -1161,17 +1169,9 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Group_IDColumn {
+            public global::System.Data.DataColumn Sub_Group_NoColumn {
                 get {
-                    return this.columnGroup_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SubGroupColumn {
-                get {
-                    return this.columnSubGroup;
+                    return this.columnSub_Group_No;
                 }
             }
             
@@ -1212,15 +1212,15 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StudentTableRow AddStudentTableRow(string _Acadamic_Year___Sem, string programme, string Group_No, string Group_ID, string SubGroup) {
+            public StudentTableRow AddStudentTableRow(string Acadamic_Year_, string Semester, string Program, string Group_No, string Sub_Group_No) {
                 StudentTableRow rowStudentTableRow = ((StudentTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        _Acadamic_Year___Sem,
-                        programme,
+                        Acadamic_Year_,
+                        Semester,
+                        Program,
                         Group_No,
-                        Group_ID,
-                        SubGroup};
+                        Sub_Group_No};
                 rowStudentTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStudentTableRow);
                 return rowStudentTableRow;
@@ -1251,11 +1251,11 @@ namespace ABC_TimetableManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this._columnAcadamic_Year___Sem = base.Columns["Acadamic Year & Sem"];
-                this.columnprogramme = base.Columns["programme"];
+                this.columnAcadamic_Year_ = base.Columns["Acadamic Year "];
+                this.columnSemester = base.Columns["Semester"];
+                this.columnProgram = base.Columns["Program"];
                 this.columnGroup_No = base.Columns["Group No"];
-                this.columnGroup_ID = base.Columns["Group ID"];
-                this.columnSubGroup = base.Columns["SubGroup"];
+                this.columnSub_Group_No = base.Columns["Sub Group No"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1263,18 +1263,16 @@ namespace ABC_TimetableManagementSystem {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this._columnAcadamic_Year___Sem = new global::System.Data.DataColumn("Acadamic Year & Sem", typeof(string), null, global::System.Data.MappingType.Element);
-                this._columnAcadamic_Year___Sem.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnAcadamic_Year___Sem");
-                this._columnAcadamic_Year___Sem.ExtendedProperties.Add("Generator_UserColumnName", "Acadamic Year & Sem");
-                base.Columns.Add(this._columnAcadamic_Year___Sem);
-                this.columnprogramme = new global::System.Data.DataColumn("programme", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprogramme);
+                this.columnAcadamic_Year_ = new global::System.Data.DataColumn("Acadamic Year ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAcadamic_Year_);
+                this.columnSemester = new global::System.Data.DataColumn("Semester", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSemester);
+                this.columnProgram = new global::System.Data.DataColumn("Program", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProgram);
                 this.columnGroup_No = new global::System.Data.DataColumn("Group No", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGroup_No);
-                this.columnGroup_ID = new global::System.Data.DataColumn("Group ID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGroup_ID);
-                this.columnSubGroup = new global::System.Data.DataColumn("SubGroup", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSubGroup);
+                this.columnSub_Group_No = new global::System.Data.DataColumn("Sub Group No", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSub_Group_No);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -1283,11 +1281,11 @@ namespace ABC_TimetableManagementSystem {
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
-                this._columnAcadamic_Year___Sem.MaxLength = 20;
-                this.columnprogramme.MaxLength = 30;
+                this.columnAcadamic_Year_.MaxLength = 20;
+                this.columnSemester.MaxLength = 30;
+                this.columnProgram.MaxLength = 20;
                 this.columnGroup_No.MaxLength = 20;
-                this.columnGroup_ID.MaxLength = 20;
-                this.columnSubGroup.MaxLength = 20;
+                this.columnSub_Group_No.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2150,33 +2148,49 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string _Acadamic_Year___Sem {
+            public string Acadamic_Year_ {
                 get {
                     try {
-                        return ((string)(this[this.tableStudentTable._Acadamic_Year___SemColumn]));
+                        return ((string)(this[this.tableStudentTable.Acadamic_Year_Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Acadamic Year & Sem\' in table \'StudentTable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Acadamic Year \' in table \'StudentTable\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableStudentTable._Acadamic_Year___SemColumn] = value;
+                    this[this.tableStudentTable.Acadamic_Year_Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string programme {
+            public string Semester {
                 get {
                     try {
-                        return ((string)(this[this.tableStudentTable.programmeColumn]));
+                        return ((string)(this[this.tableStudentTable.SemesterColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'programme\' in table \'StudentTable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Semester\' in table \'StudentTable\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableStudentTable.programmeColumn] = value;
+                    this[this.tableStudentTable.SemesterColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Program {
+                get {
+                    try {
+                        return ((string)(this[this.tableStudentTable.ProgramColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Program\' in table \'StudentTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudentTable.ProgramColumn] = value;
                 }
             }
             
@@ -2198,58 +2212,54 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Group_ID {
+            public string Sub_Group_No {
                 get {
                     try {
-                        return ((string)(this[this.tableStudentTable.Group_IDColumn]));
+                        return ((string)(this[this.tableStudentTable.Sub_Group_NoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Group ID\' in table \'StudentTable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Sub Group No\' in table \'StudentTable\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableStudentTable.Group_IDColumn] = value;
+                    this[this.tableStudentTable.Sub_Group_NoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string SubGroup {
-                get {
-                    try {
-                        return ((string)(this[this.tableStudentTable.SubGroupColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SubGroup\' in table \'StudentTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableStudentTable.SubGroupColumn] = value;
-                }
+            public bool IsAcadamic_Year_Null() {
+                return this.IsNull(this.tableStudentTable.Acadamic_Year_Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Is_Acadamic_Year___SemNull() {
-                return this.IsNull(this.tableStudentTable._Acadamic_Year___SemColumn);
+            public void SetAcadamic_Year_Null() {
+                this[this.tableStudentTable.Acadamic_Year_Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Set_Acadamic_Year___SemNull() {
-                this[this.tableStudentTable._Acadamic_Year___SemColumn] = global::System.Convert.DBNull;
+            public bool IsSemesterNull() {
+                return this.IsNull(this.tableStudentTable.SemesterColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsprogrammeNull() {
-                return this.IsNull(this.tableStudentTable.programmeColumn);
+            public void SetSemesterNull() {
+                this[this.tableStudentTable.SemesterColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetprogrammeNull() {
-                this[this.tableStudentTable.programmeColumn] = global::System.Convert.DBNull;
+            public bool IsProgramNull() {
+                return this.IsNull(this.tableStudentTable.ProgramColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetProgramNull() {
+                this[this.tableStudentTable.ProgramColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2266,26 +2276,14 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsGroup_IDNull() {
-                return this.IsNull(this.tableStudentTable.Group_IDColumn);
+            public bool IsSub_Group_NoNull() {
+                return this.IsNull(this.tableStudentTable.Sub_Group_NoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetGroup_IDNull() {
-                this[this.tableStudentTable.Group_IDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsSubGroupNull() {
-                return this.IsNull(this.tableStudentTable.SubGroupColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetSubGroupNull() {
-                this[this.tableStudentTable.SubGroupColumn] = global::System.Convert.DBNull;
+            public void SetSub_Group_NoNull() {
+                this[this.tableStudentTable.Sub_Group_NoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3746,11 +3744,11 @@ SELECT Id, Subject_Name, Subject_Code, Offerd_year, Offerd_Semester, Lecture_Hou
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "StudentTable";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Acadamic Year & Sem", "Acadamic Year & Sem");
-            tableMapping.ColumnMappings.Add("programme", "programme");
-            tableMapping.ColumnMappings.Add("Group No", "Group No");
-            tableMapping.ColumnMappings.Add("Group ID", "Group ID");
-            tableMapping.ColumnMappings.Add("SubGroup", "SubGroup");
+            tableMapping.ColumnMappings.Add("Acadamic Year & Sem", "Acadamic Year ");
+            tableMapping.ColumnMappings.Add("programme", "Semester");
+            tableMapping.ColumnMappings.Add("Group No", "Program");
+            tableMapping.ColumnMappings.Add("Group ID", "Group No");
+            tableMapping.ColumnMappings.Add("SubGroup", "Sub Group No");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;

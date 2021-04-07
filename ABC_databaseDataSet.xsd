@@ -257,11 +257,11 @@ SELECT Id, [Acadamic Year &amp; Sem], programme, [Group No], [Group ID], SubGrou
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
-              <Mapping SourceColumn="Acadamic Year &amp; Sem" DataSetColumn="Acadamic Year &amp; Sem" />
-              <Mapping SourceColumn="programme" DataSetColumn="programme" />
-              <Mapping SourceColumn="Group No" DataSetColumn="Group No" />
-              <Mapping SourceColumn="Group ID" DataSetColumn="Group ID" />
-              <Mapping SourceColumn="SubGroup" DataSetColumn="SubGroup" />
+              <Mapping SourceColumn="Acadamic Year &amp; Sem" DataSetColumn="Acadamic Year " />
+              <Mapping SourceColumn="programme" DataSetColumn="Semester" />
+              <Mapping SourceColumn="Group No" DataSetColumn="Program" />
+              <Mapping SourceColumn="Group ID" DataSetColumn="Group No" />
+              <Mapping SourceColumn="SubGroup" DataSetColumn="Sub Group No" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -343,7 +343,7 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
   <xs:element name="ABC_databaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ABC_databaseDataSet" msprop:Generator_UserDSName="ABC_databaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="RoomsTable" msprop:Generator_TableClassName="RoomsTableDataTable" msprop:Generator_TableVarName="tableRoomsTable" msprop:Generator_TablePropName="RoomsTable" msprop:Generator_RowDeletingName="RoomsTableRowDeleting" msprop:Generator_RowChangingName="RoomsTableRowChanging" msprop:Generator_RowEvHandlerName="RoomsTableRowChangeEventHandler" msprop:Generator_RowDeletedName="RoomsTableRowDeleted" msprop:Generator_UserTableName="RoomsTable" msprop:Generator_RowChangedName="RoomsTableRowChanged" msprop:Generator_RowEvArgName="RoomsTableRowChangeEvent" msprop:Generator_RowClassName="RoomsTableRow">
+        <xs:element name="RoomsTable" msprop:Generator_TableClassName="RoomsTableDataTable" msprop:Generator_TableVarName="tableRoomsTable" msprop:Generator_RowChangedName="RoomsTableRowChanged" msprop:Generator_TablePropName="RoomsTable" msprop:Generator_RowDeletingName="RoomsTableRowDeleting" msprop:Generator_RowChangingName="RoomsTableRowChanging" msprop:Generator_RowEvHandlerName="RoomsTableRowChangeEventHandler" msprop:Generator_RowDeletedName="RoomsTableRowDeleted" msprop:Generator_RowClassName="RoomsTableRow" msprop:Generator_UserTableName="RoomsTable" msprop:Generator_RowEvArgName="RoomsTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -378,7 +378,7 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SubjectTable" msprop:Generator_TableClassName="SubjectTableDataTable" msprop:Generator_TableVarName="tableSubjectTable" msprop:Generator_TablePropName="SubjectTable" msprop:Generator_RowDeletingName="SubjectTableRowDeleting" msprop:Generator_RowChangingName="SubjectTableRowChanging" msprop:Generator_RowEvHandlerName="SubjectTableRowChangeEventHandler" msprop:Generator_RowDeletedName="SubjectTableRowDeleted" msprop:Generator_UserTableName="SubjectTable" msprop:Generator_RowChangedName="SubjectTableRowChanged" msprop:Generator_RowEvArgName="SubjectTableRowChangeEvent" msprop:Generator_RowClassName="SubjectTableRow">
+        <xs:element name="SubjectTable" msprop:Generator_TableClassName="SubjectTableDataTable" msprop:Generator_TableVarName="tableSubjectTable" msprop:Generator_RowChangedName="SubjectTableRowChanged" msprop:Generator_TablePropName="SubjectTable" msprop:Generator_RowDeletingName="SubjectTableRowDeleting" msprop:Generator_RowChangingName="SubjectTableRowChanging" msprop:Generator_RowEvHandlerName="SubjectTableRowChangeEventHandler" msprop:Generator_RowDeletedName="SubjectTableRowDeleted" msprop:Generator_RowClassName="SubjectTableRow" msprop:Generator_UserTableName="SubjectTable" msprop:Generator_RowEvArgName="SubjectTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -405,21 +405,28 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="StudentTable" msprop:Generator_TableClassName="StudentTableDataTable" msprop:Generator_TableVarName="tableStudentTable" msprop:Generator_RowChangedName="StudentTableRowChanged" msprop:Generator_TablePropName="StudentTable" msprop:Generator_RowDeletingName="StudentTableRowDeleting" msprop:Generator_RowChangingName="StudentTableRowChanging" msprop:Generator_RowEvHandlerName="StudentTableRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentTableRowDeleted" msprop:Generator_RowClassName="StudentTableRow" msprop:Generator_UserTableName="StudentTable" msprop:Generator_RowEvArgName="StudentTableRowChangeEvent">
+        <xs:element name="StudentTable" msprop:Generator_TableClassName="StudentTableDataTable" msprop:Generator_TableVarName="tableStudentTable" msprop:Generator_TablePropName="StudentTable" msprop:Generator_RowDeletingName="StudentTableRowDeleting" msprop:Generator_RowChangingName="StudentTableRowChanging" msprop:Generator_RowEvHandlerName="StudentTableRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentTableRowDeleted" msprop:Generator_UserTableName="StudentTable" msprop:Generator_RowChangedName="StudentTableRowChanged" msprop:Generator_RowEvArgName="StudentTableRowChangeEvent" msprop:Generator_RowClassName="StudentTableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
-              <xs:element name="Acadamic_x0020_Year_x0020__x0026__x0020_Sem" msprop:Generator_ColumnVarNameInTable="_columnAcadamic_Year___Sem" msprop:Generator_ColumnPropNameInRow="_Acadamic_Year___Sem" msprop:Generator_ColumnPropNameInTable="_Acadamic_Year___SemColumn" msprop:Generator_UserColumnName="Acadamic Year &amp; Sem" minOccurs="0">
+              <xs:element name="Acadamic_x0020_Year_x0020_" msprop:Generator_ColumnVarNameInTable="columnAcadamic_Year_" msprop:Generator_ColumnPropNameInRow="Acadamic_Year_" msprop:Generator_ColumnPropNameInTable="Acadamic_Year_Column" msprop:Generator_UserColumnName="Acadamic Year " minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="programme" msprop:Generator_ColumnVarNameInTable="columnprogramme" msprop:Generator_ColumnPropNameInRow="programme" msprop:Generator_ColumnPropNameInTable="programmeColumn" msprop:Generator_UserColumnName="programme" minOccurs="0">
+              <xs:element name="Semester" msprop:Generator_ColumnVarNameInTable="columnSemester" msprop:Generator_ColumnPropNameInRow="Semester" msprop:Generator_ColumnPropNameInTable="SemesterColumn" msprop:Generator_UserColumnName="Semester" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Program" msprop:Generator_ColumnVarNameInTable="columnProgram" msprop:Generator_ColumnPropNameInRow="Program" msprop:Generator_ColumnPropNameInTable="ProgramColumn" msprop:Generator_UserColumnName="Program" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -430,14 +437,7 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Group_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnGroup_ID" msprop:Generator_ColumnPropNameInRow="Group_ID" msprop:Generator_ColumnPropNameInTable="Group_IDColumn" msprop:Generator_UserColumnName="Group ID" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="SubGroup" msprop:Generator_ColumnVarNameInTable="columnSubGroup" msprop:Generator_ColumnPropNameInRow="SubGroup" msprop:Generator_ColumnPropNameInTable="SubGroupColumn" msprop:Generator_UserColumnName="SubGroup" minOccurs="0">
+              <xs:element name="Sub_x0020_Group_x0020_No" msprop:Generator_ColumnVarNameInTable="columnSub_Group_No" msprop:Generator_ColumnPropNameInRow="Sub_Group_No" msprop:Generator_ColumnPropNameInTable="Sub_Group_NoColumn" msprop:Generator_UserColumnName="Sub Group No" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
@@ -447,7 +447,7 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LecturerTable" msprop:Generator_TableClassName="LecturerTableDataTable" msprop:Generator_TableVarName="tableLecturerTable" msprop:Generator_TablePropName="LecturerTable" msprop:Generator_RowDeletingName="LecturerTableRowDeleting" msprop:Generator_RowChangingName="LecturerTableRowChanging" msprop:Generator_RowEvHandlerName="LecturerTableRowChangeEventHandler" msprop:Generator_RowDeletedName="LecturerTableRowDeleted" msprop:Generator_UserTableName="LecturerTable" msprop:Generator_RowChangedName="LecturerTableRowChanged" msprop:Generator_RowEvArgName="LecturerTableRowChangeEvent" msprop:Generator_RowClassName="LecturerTableRow">
+        <xs:element name="LecturerTable" msprop:Generator_TableClassName="LecturerTableDataTable" msprop:Generator_TableVarName="tableLecturerTable" msprop:Generator_RowChangedName="LecturerTableRowChanged" msprop:Generator_TablePropName="LecturerTable" msprop:Generator_RowDeletingName="LecturerTableRowDeleting" msprop:Generator_RowChangingName="LecturerTableRowChanging" msprop:Generator_RowEvHandlerName="LecturerTableRowChangeEventHandler" msprop:Generator_RowDeletedName="LecturerTableRowDeleted" msprop:Generator_RowClassName="LecturerTableRow" msprop:Generator_UserTableName="LecturerTable" msprop:Generator_RowEvArgName="LecturerTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
