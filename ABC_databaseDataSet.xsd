@@ -343,7 +343,7 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
   <xs:element name="ABC_databaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ABC_databaseDataSet" msprop:Generator_UserDSName="ABC_databaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="RoomsTable" msprop:Generator_TableClassName="RoomsTableDataTable" msprop:Generator_TableVarName="tableRoomsTable" msprop:Generator_RowChangedName="RoomsTableRowChanged" msprop:Generator_TablePropName="RoomsTable" msprop:Generator_RowDeletingName="RoomsTableRowDeleting" msprop:Generator_RowChangingName="RoomsTableRowChanging" msprop:Generator_RowEvHandlerName="RoomsTableRowChangeEventHandler" msprop:Generator_RowDeletedName="RoomsTableRowDeleted" msprop:Generator_RowClassName="RoomsTableRow" msprop:Generator_UserTableName="RoomsTable" msprop:Generator_RowEvArgName="RoomsTableRowChangeEvent">
+        <xs:element name="RoomsTable" msprop:Generator_TableClassName="RoomsTableDataTable" msprop:Generator_TableVarName="tableRoomsTable" msprop:Generator_TablePropName="RoomsTable" msprop:Generator_RowDeletingName="RoomsTableRowDeleting" msprop:Generator_RowChangingName="RoomsTableRowChanging" msprop:Generator_RowEvHandlerName="RoomsTableRowChangeEventHandler" msprop:Generator_RowDeletedName="RoomsTableRowDeleted" msprop:Generator_UserTableName="RoomsTable" msprop:Generator_RowChangedName="RoomsTableRowChanged" msprop:Generator_RowEvArgName="RoomsTableRowChangeEvent" msprop:Generator_RowClassName="RoomsTableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -378,7 +378,7 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SubjectTable" msprop:Generator_TableClassName="SubjectTableDataTable" msprop:Generator_TableVarName="tableSubjectTable" msprop:Generator_RowChangedName="SubjectTableRowChanged" msprop:Generator_TablePropName="SubjectTable" msprop:Generator_RowDeletingName="SubjectTableRowDeleting" msprop:Generator_RowChangingName="SubjectTableRowChanging" msprop:Generator_RowEvHandlerName="SubjectTableRowChangeEventHandler" msprop:Generator_RowDeletedName="SubjectTableRowDeleted" msprop:Generator_RowClassName="SubjectTableRow" msprop:Generator_UserTableName="SubjectTable" msprop:Generator_RowEvArgName="SubjectTableRowChangeEvent">
+        <xs:element name="SubjectTable" msprop:Generator_TableClassName="SubjectTableDataTable" msprop:Generator_TableVarName="tableSubjectTable" msprop:Generator_TablePropName="SubjectTable" msprop:Generator_RowDeletingName="SubjectTableRowDeleting" msprop:Generator_RowChangingName="SubjectTableRowChanging" msprop:Generator_RowEvHandlerName="SubjectTableRowChangeEventHandler" msprop:Generator_RowDeletedName="SubjectTableRowDeleted" msprop:Generator_UserTableName="SubjectTable" msprop:Generator_RowChangedName="SubjectTableRowChanged" msprop:Generator_RowEvArgName="SubjectTableRowChangeEvent" msprop:Generator_RowClassName="SubjectTableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -405,7 +405,7 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="StudentTable" msprop:Generator_TableClassName="StudentTableDataTable" msprop:Generator_TableVarName="tableStudentTable" msprop:Generator_TablePropName="StudentTable" msprop:Generator_RowDeletingName="StudentTableRowDeleting" msprop:Generator_RowChangingName="StudentTableRowChanging" msprop:Generator_RowEvHandlerName="StudentTableRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentTableRowDeleted" msprop:Generator_UserTableName="StudentTable" msprop:Generator_RowChangedName="StudentTableRowChanged" msprop:Generator_RowEvArgName="StudentTableRowChangeEvent" msprop:Generator_RowClassName="StudentTableRow">
+        <xs:element name="StudentTable" msprop:Generator_TableClassName="StudentTableDataTable" msprop:Generator_TableVarName="tableStudentTable" msprop:Generator_RowChangedName="StudentTableRowChanged" msprop:Generator_TablePropName="StudentTable" msprop:Generator_RowDeletingName="StudentTableRowDeleting" msprop:Generator_RowChangingName="StudentTableRowChanging" msprop:Generator_RowEvHandlerName="StudentTableRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentTableRowDeleted" msprop:Generator_RowClassName="StudentTableRow" msprop:Generator_UserTableName="StudentTable" msprop:Generator_RowEvArgName="StudentTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -447,7 +447,7 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LecturerTable" msprop:Generator_TableClassName="LecturerTableDataTable" msprop:Generator_TableVarName="tableLecturerTable" msprop:Generator_RowChangedName="LecturerTableRowChanged" msprop:Generator_TablePropName="LecturerTable" msprop:Generator_RowDeletingName="LecturerTableRowDeleting" msprop:Generator_RowChangingName="LecturerTableRowChanging" msprop:Generator_RowEvHandlerName="LecturerTableRowChangeEventHandler" msprop:Generator_RowDeletedName="LecturerTableRowDeleted" msprop:Generator_RowClassName="LecturerTableRow" msprop:Generator_UserTableName="LecturerTable" msprop:Generator_RowEvArgName="LecturerTableRowChangeEvent">
+        <xs:element name="LecturerTable" msprop:Generator_TableClassName="LecturerTableDataTable" msprop:Generator_TableVarName="tableLecturerTable" msprop:Generator_TablePropName="LecturerTable" msprop:Generator_RowDeletingName="LecturerTableRowDeleting" msprop:Generator_RowChangingName="LecturerTableRowChanging" msprop:Generator_RowEvHandlerName="LecturerTableRowChangeEventHandler" msprop:Generator_RowDeletedName="LecturerTableRowDeleted" msprop:Generator_UserTableName="LecturerTable" msprop:Generator_RowChangedName="LecturerTableRowChanged" msprop:Generator_RowEvArgName="LecturerTableRowChangeEvent" msprop:Generator_RowClassName="LecturerTableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -476,6 +476,21 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TagTable" msprop:Generator_TableClassName="TagTableDataTable" msprop:Generator_TableVarName="tableTagTable" msprop:Generator_TablePropName="TagTable" msprop:Generator_RowDeletingName="TagTableRowDeleting" msprop:Generator_RowChangingName="TagTableRowChanging" msprop:Generator_RowEvHandlerName="TagTableRowChangeEventHandler" msprop:Generator_RowDeletedName="TagTableRowDeleted" msprop:Generator_UserTableName="TagTable" msprop:Generator_RowChangedName="TagTableRowChanged" msprop:Generator_RowEvArgName="TagTableRowChangeEvent" msprop:Generator_RowClassName="TagTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tag_x0020_Name" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="Tag_Name" msprop:Generator_ColumnVarNameInTable="columnTag_Name" msprop:Generator_ColumnPropNameInTable="Tag_NameColumn" msprop:Generator_UserColumnName="Tag Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tag_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnTag_Code" msprop:Generator_ColumnPropNameInRow="Tag_Code" msprop:Generator_ColumnPropNameInTable="Tag_CodeColumn" msprop:Generator_UserColumnName="Tag Code" type="xs:string" />
+              <xs:element name="Related_x0020_Tag" msprop:Generator_ColumnVarNameInTable="columnRelated_Tag" msprop:Generator_ColumnPropNameInRow="Related_Tag" msprop:Generator_ColumnPropNameInTable="Related_TagColumn" msprop:Generator_UserColumnName="Related Tag" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -493,6 +508,10 @@ SELECT Id, Name, EmoID, Faculty, Level FROM LecturerTable WHERE (Id = @Id)</Comm
     <xs:unique name="LecturerTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:LecturerTable" />
       <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="TagTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TagTable" />
+      <xs:field xpath="mstns:Tag_x0020_Code" />
     </xs:unique>
   </xs:element>
 </xs:schema>

@@ -26,5 +26,15 @@ namespace ABC_TimetableManagementSystem
         {
 
         }
+
+        private void related_TagTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

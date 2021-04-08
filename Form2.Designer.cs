@@ -73,6 +73,60 @@ namespace ABC_TimetableManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.semesterNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
+            // idLabel1
+            // 
+            idLabel1.AutoSize = true;
+            idLabel1.Location = new System.Drawing.Point(260, 112);
+            idLabel1.Name = "idLabel1";
+            idLabel1.Size = new System.Drawing.Size(23, 17);
+            idLabel1.TabIndex = 18;
+            idLabel1.Text = "Id:";
+            // 
+            // acadamic_Year_Label
+            // 
+            acadamic_Year_Label.AutoSize = true;
+            acadamic_Year_Label.Location = new System.Drawing.Point(260, 140);
+            acadamic_Year_Label.Name = "acadamic_Year_Label";
+            acadamic_Year_Label.Size = new System.Drawing.Size(111, 17);
+            acadamic_Year_Label.TabIndex = 20;
+            acadamic_Year_Label.Text = "Acadamic Year :";
+            // 
+            // semesterLabel
+            // 
+            semesterLabel.AutoSize = true;
+            semesterLabel.Location = new System.Drawing.Point(260, 165);
+            semesterLabel.Name = "semesterLabel";
+            semesterLabel.Size = new System.Drawing.Size(72, 17);
+            semesterLabel.TabIndex = 22;
+            semesterLabel.Text = "Semester:";
+            // 
+            // programLabel
+            // 
+            programLabel.AutoSize = true;
+            programLabel.Location = new System.Drawing.Point(260, 196);
+            programLabel.Name = "programLabel";
+            programLabel.Size = new System.Drawing.Size(66, 17);
+            programLabel.TabIndex = 24;
+            programLabel.Text = "Program:";
+            // 
+            // group_NoLabel1
+            // 
+            group_NoLabel1.AutoSize = true;
+            group_NoLabel1.Location = new System.Drawing.Point(260, 224);
+            group_NoLabel1.Name = "group_NoLabel1";
+            group_NoLabel1.Size = new System.Drawing.Size(74, 17);
+            group_NoLabel1.TabIndex = 26;
+            group_NoLabel1.Text = "Group No:";
+            // 
+            // sub_Group_NoLabel
+            // 
+            sub_Group_NoLabel.AutoSize = true;
+            sub_Group_NoLabel.Location = new System.Drawing.Point(260, 252);
+            sub_Group_NoLabel.Name = "sub_Group_NoLabel";
+            sub_Group_NoLabel.Size = new System.Drawing.Size(103, 17);
+            sub_Group_NoLabel.TabIndex = 28;
+            sub_Group_NoLabel.Text = "Sub Group No:";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -232,15 +286,6 @@ namespace ABC_TimetableManagementSystem
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
-            // idLabel1
-            // 
-            idLabel1.AutoSize = true;
-            idLabel1.Location = new System.Drawing.Point(260, 112);
-            idLabel1.Name = "idLabel1";
-            idLabel1.Size = new System.Drawing.Size(23, 17);
-            idLabel1.TabIndex = 18;
-            idLabel1.Text = "Id:";
-            // 
             // IDTb
             // 
             this.IDTb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentTableBindingSource, "Id", true));
@@ -248,15 +293,6 @@ namespace ABC_TimetableManagementSystem
             this.IDTb.Name = "IDTb";
             this.IDTb.Size = new System.Drawing.Size(212, 22);
             this.IDTb.TabIndex = 19;
-            // 
-            // acadamic_Year_Label
-            // 
-            acadamic_Year_Label.AutoSize = true;
-            acadamic_Year_Label.Location = new System.Drawing.Point(260, 140);
-            acadamic_Year_Label.Name = "acadamic_Year_Label";
-            acadamic_Year_Label.Size = new System.Drawing.Size(111, 17);
-            acadamic_Year_Label.TabIndex = 20;
-            acadamic_Year_Label.Text = "Acadamic Year :";
             // 
             // acadamic_Year_TextBox
             // 
@@ -266,15 +302,6 @@ namespace ABC_TimetableManagementSystem
             this.acadamic_Year_TextBox.Size = new System.Drawing.Size(212, 22);
             this.acadamic_Year_TextBox.TabIndex = 21;
             // 
-            // semesterLabel
-            // 
-            semesterLabel.AutoSize = true;
-            semesterLabel.Location = new System.Drawing.Point(260, 165);
-            semesterLabel.Name = "semesterLabel";
-            semesterLabel.Size = new System.Drawing.Size(72, 17);
-            semesterLabel.TabIndex = 22;
-            semesterLabel.Text = "Semester:";
-            // 
             // semesterNumericUpDown
             // 
             this.semesterNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.studentTableBindingSource, "Semester", true));
@@ -282,15 +309,6 @@ namespace ABC_TimetableManagementSystem
             this.semesterNumericUpDown.Name = "semesterNumericUpDown";
             this.semesterNumericUpDown.Size = new System.Drawing.Size(212, 22);
             this.semesterNumericUpDown.TabIndex = 23;
-            // 
-            // programLabel
-            // 
-            programLabel.AutoSize = true;
-            programLabel.Location = new System.Drawing.Point(260, 196);
-            programLabel.Name = "programLabel";
-            programLabel.Size = new System.Drawing.Size(66, 17);
-            programLabel.TabIndex = 24;
-            programLabel.Text = "Program:";
             // 
             // programTextBox
             // 
@@ -300,15 +318,6 @@ namespace ABC_TimetableManagementSystem
             this.programTextBox.Size = new System.Drawing.Size(212, 22);
             this.programTextBox.TabIndex = 25;
             // 
-            // group_NoLabel1
-            // 
-            group_NoLabel1.AutoSize = true;
-            group_NoLabel1.Location = new System.Drawing.Point(260, 224);
-            group_NoLabel1.Name = "group_NoLabel1";
-            group_NoLabel1.Size = new System.Drawing.Size(74, 17);
-            group_NoLabel1.TabIndex = 26;
-            group_NoLabel1.Text = "Group No:";
-            // 
             // group_NoTextBox
             // 
             this.group_NoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentTableBindingSource, "Group No", true));
@@ -316,15 +325,6 @@ namespace ABC_TimetableManagementSystem
             this.group_NoTextBox.Name = "group_NoTextBox";
             this.group_NoTextBox.Size = new System.Drawing.Size(212, 22);
             this.group_NoTextBox.TabIndex = 27;
-            // 
-            // sub_Group_NoLabel
-            // 
-            sub_Group_NoLabel.AutoSize = true;
-            sub_Group_NoLabel.Location = new System.Drawing.Point(260, 252);
-            sub_Group_NoLabel.Name = "sub_Group_NoLabel";
-            sub_Group_NoLabel.Size = new System.Drawing.Size(103, 17);
-            sub_Group_NoLabel.TabIndex = 28;
-            sub_Group_NoLabel.Text = "Sub Group No:";
             // 
             // sub_Group_NoTextBox
             // 
