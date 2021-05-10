@@ -1,5 +1,6 @@
 ﻿using ABC_TimetableManagementSystem.LocationManagement;
 using ABC_TimetableManagementSystem.Statistics;
+using ABC_TimetableManagementSystem.GenarateTimetable;
 
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,13 @@ namespace ABC_TimetableManagementSystem
             this.Hide();
             statistics stat = new statistics();
             stat.ShowDialog();
+        }
+
+        private void buttonTimetable_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            genarateTimetable genTimetbl = new genarateTimetable();
+            genTimetbl.ShowDialog();
         }
     }
 }

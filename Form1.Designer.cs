@@ -131,6 +131,7 @@ namespace ABC_TimetableManagementSystem
             this.buttonTimetable.Text = "Genarate Timetable";
             this.buttonTimetable.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonTimetable.UseVisualStyleBackColor = true;
+            this.buttonTimetable.Click += new System.EventHandler(this.buttonTimetable_Click);
             // 
             // buttonStat
             // 

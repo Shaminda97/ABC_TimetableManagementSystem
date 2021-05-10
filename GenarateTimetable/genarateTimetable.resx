@@ -117,47 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="subjectLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="room_NumberLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="tagLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="roomsTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 17</value>
   </metadata>
-  <metadata name="suitableRoomLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="aBC_databaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
-  <metadata name="groupIDLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="aBC_databaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="roomsTableTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>382, 17</value>
+  </metadata>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>571, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAq5JREFUSEvl
-        lU1oE0EUx4uinhTBg+DnRUEF8dCjILXZJO5HNrubTLJJa2wQS0SwHmxtqcU0qa2f9aNSiqDtpTctFFpa
-        EDzYgyBIW4tYkbZabVrrxQY0yWZ3nzN1Dgom2Wo8iD/Yy868/5s372NK/h9KS6vXMC60g+H9e1m2YgP9
-        XRwYDu1X1KoBTg5qDO8F8tkFBN6K49OM4A0jhFbTrb+Hw+2vd4o+80r7HRifeAlfUynQdR3mEgvQ1z8I
-        aqjakNXwhE0MbKYmK+OI6Gtw+0LG6NgE5CKZ+gINsTaQ/FWzB0VxPTW1hlOQDzhFvzE6ntsB4bOZgufp
-        91BzttF0eSvvU3NryGrVELkiq0zNvAVyKLuobqES+WFZdh0rqdkXOAdWea0vQqSmzmAEzwkqkx+niHaR
-        CkpnMlSiMI+1N9DS0UGq7iaVyQ8pWYfLB6ZpUonCPMlOwaW7XYBv4B6VyY9NljeRSD4ufqIShRnUXsG5
-        llaT4bwXqExhFDU82z8wTCXyM28koS85Bm4UMhyccohKFIbh0clgOGKk02kq9WvSkIUhHMWN3h7cK8fe
-        RaPRVVSiMGRO4UacjLVeM7NZnUr+zAKOYFibhJ5nwyQXho1XDlNz65QLaKvkCyXO1J43SR8QlnDzjWSn
-        l3PwYGkU2nu7lx3YBd8pu+DZTU1XRpkkbXSjo71kfkVO1xpXb3dCa1cn1DbHweWpNMg4IRHYWLQPF0uK
-        V4KPeE/FwzJW2UYlrEOM8EkjdsF7Cwt1kyoiSf4xB6wcGKlvuqjXNcY0Tg58cLjV7XSpeGDhgcbmNi2T
-        0aApfvnvOCIPGo4mEW+7rpFp8d1RcAa/N2vpluJQzik7WSkwh6tSS8wvLD9wDpdnD10uHiQinLdp4gBH
-        8vSPX85ckD4jg3ZFzfkPUVLyDfNOomo1CH4EAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAARxJREFUSEvt
-        lT2OwjAQRkMBDVBScgG2QNoC9hSchZOA4Ah7hu32GCwNLS0VS0GBgO9ZGQkZObaJ6PKkJ8WJx5O/GRcN
-        uQxKjaE8yJvnSf7JpfyQSbTkTynHxkxepZ/EvMi17MhK5tKCOK6iK6dyJc+SmF8ZTPIpbSJyzLkUxnIv
-        ieNJnujLnbTFTc5xLQWScFO8rhEnHvmW/uIm11Lh7olZuFEAW/gV+CbEbtwoQJ0EPUns0Y0C1EkA0fi3
-        J+DxmMDjvkI0wVYyYeJG+UQT0FuYQIWmkvWb07goFoqG4kkhu1CtYCj/1CRZraYtaVw2kYRfMvbhc5ql
-        64oszOuyIF9aOK3cCLX7Svgm9BbK/1/6SdiM2JQMf8NqiFEUdxlveYzAYMDbAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAiJJREFUSEul
         lc1O20AQxxfOpa9CP16Aq+2COFEQL1DadyihID6utGvDIXCoxAXRIwdip5CiSqhSi5AQIKA4VUtIpVYC
@@ -172,16 +151,4 @@
         a0wrFfV+CgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="aBC_databaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="suitableTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>187, 17</value>
-  </metadata>
-  <metadata name="suitableTableTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>389, 17</value>
-  </metadata>
-  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>586, 17</value>
-  </metadata>
 </root>

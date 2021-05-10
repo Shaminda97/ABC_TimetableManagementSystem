@@ -43,16 +43,16 @@ namespace ABC_TimetableManagementSystem.Statistics
             //pieChart for years vs student
             chartStudent.Titles.Add("Students");
             connection.Open();
-            SqlCommand cmdS1 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYearAndSem LIKE 'Y1%' ", connection);
+            SqlCommand cmdS1 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYear = 1 ", connection);//AcadamicYearAndSem LIKE 'Y1%' "
             int firstYrStd = (int)cmdS1.ExecuteScalar();
 
-            SqlCommand cmdS2 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYearAndSem LIKE 'Y2%'", connection);
+            SqlCommand cmdS2 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYear =2", connection);
             int secondYrStd = (int)cmdS2.ExecuteScalar();
 
-            SqlCommand cmdS3 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYearAndSem LIKE 'Y3%'", connection);
+            SqlCommand cmdS3 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYear = 3", connection);
             int thirdYrStd = (int)cmdS3.ExecuteScalar();
 
-            SqlCommand cmdS4 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYearAndSem LIKE 'Y4%'", connection);
+            SqlCommand cmdS4 = new SqlCommand("SELECT COUNT (*) FROM [StudentTable] WHERE AcadamicYear = 4", connection);
             int forthYrStd = (int)cmdS4.ExecuteScalar();
 
             chartStudent.Series["s2"].Points.AddXY("1st", firstYrStd);
@@ -65,22 +65,22 @@ namespace ABC_TimetableManagementSystem.Statistics
             //pieChart for lecturers vs ranking
             chartLect.Titles.Add("Lecturers");
             connection.Open();
-            SqlCommand cmdc1 = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] WHERE Level= 1", connection);
+            SqlCommand cmdc1 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] WHERE Level= 1", connection);
             int lvl1 = (int)cmdc1.ExecuteScalar();
 
-            SqlCommand cmdc2 = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] WHERE Level= 2", connection);
+            SqlCommand cmdc2 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] WHERE Level= 2", connection);
             int lvl2 = (int)cmdc2.ExecuteScalar();
 
-            SqlCommand cmdc3 = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] WHERE Level= 3", connection);
+            SqlCommand cmdc3 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] WHERE Level= 3", connection);
             int lvl3 = (int)cmdc3.ExecuteScalar();
 
-            SqlCommand cmcd4 = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] WHERE Level= 4", connection);
+            SqlCommand cmcd4 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] WHERE Level= 4", connection);
             int lvl4 = (int)cmcd4.ExecuteScalar();
 
-            SqlCommand cmcd5 = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] WHERE Level= 5", connection);
+            SqlCommand cmcd5 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] WHERE Level= 5", connection);
             int lvl5 = (int)cmcd5.ExecuteScalar();
 
-            SqlCommand cmcd6 = new SqlCommand("SELECT COUNT (*) FROM[LecturerTable] WHERE Level= 6", connection);
+            SqlCommand cmcd6 = new SqlCommand("SELECT COUNT (*) FROM[LecturesDrtails] WHERE Level= 6", connection);
             int lvl6 = (int)cmcd6.ExecuteScalar();
 
             chartLect.Series["s1"].Points.AddXY("Prof", lvl1);
@@ -93,7 +93,7 @@ namespace ABC_TimetableManagementSystem.Statistics
 
             //Total Lecturer
             connection.Open();
-            SqlCommand cmd = new SqlCommand("SELECT COUNT (*) FROM [LecturerTable] ", connection);
+            SqlCommand cmd = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] ", connection);
             textBoxTotLec.Text = cmd.ExecuteScalar().ToString();
             connection.Close();
 

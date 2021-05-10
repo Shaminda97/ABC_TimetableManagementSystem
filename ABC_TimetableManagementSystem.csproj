@@ -89,6 +89,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenarateTimetable\genarateTimetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenarateTimetable\genarateTimetable.Designer.cs">
+      <DependentUpon>genarateTimetable.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocationManagement\addSuitableRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenarateTimetable\genarateTimetable.resx">
+      <DependentUpon>genarateTimetable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocationManagement\addSuitableRoom.resx">
       <DependentUpon>addSuitableRoom.cs</DependentUpon>
