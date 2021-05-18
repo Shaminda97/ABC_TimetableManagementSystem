@@ -65,22 +65,22 @@ namespace ABC_TimetableManagementSystem.Statistics
             //pieChart for lecturers vs ranking
             chartLect.Titles.Add("Lecturers");
             connection.Open();
-            SqlCommand cmdc1 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] WHERE Level= 1", connection);
+            SqlCommand cmdc1 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDetails] WHERE Level= 1", connection);
             int lvl1 = (int)cmdc1.ExecuteScalar();
 
-            SqlCommand cmdc2 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] WHERE Level= 2", connection);
+            SqlCommand cmdc2 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDetails] WHERE Level= 2", connection);
             int lvl2 = (int)cmdc2.ExecuteScalar();
 
-            SqlCommand cmdc3 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] WHERE Level= 3", connection);
+            SqlCommand cmdc3 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDetails] WHERE Level= 3", connection);
             int lvl3 = (int)cmdc3.ExecuteScalar();
 
-            SqlCommand cmcd4 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] WHERE Level= 4", connection);
+            SqlCommand cmcd4 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDetails] WHERE Level= 4", connection);
             int lvl4 = (int)cmcd4.ExecuteScalar();
 
-            SqlCommand cmcd5 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] WHERE Level= 5", connection);
+            SqlCommand cmcd5 = new SqlCommand("SELECT COUNT (*) FROM [LecturesDetails] WHERE Level= 5", connection);
             int lvl5 = (int)cmcd5.ExecuteScalar();
 
-            SqlCommand cmcd6 = new SqlCommand("SELECT COUNT (*) FROM[LecturesDrtails] WHERE Level= 6", connection);
+            SqlCommand cmcd6 = new SqlCommand("SELECT COUNT (*) FROM[LecturesDetails] WHERE Level= 6", connection);
             int lvl6 = (int)cmcd6.ExecuteScalar();
 
             chartLect.Series["s1"].Points.AddXY("Prof", lvl1);
@@ -93,7 +93,7 @@ namespace ABC_TimetableManagementSystem.Statistics
 
             //Total Lecturer
             connection.Open();
-            SqlCommand cmd = new SqlCommand("SELECT COUNT (*) FROM [LecturesDrtails] ", connection);
+            SqlCommand cmd = new SqlCommand("SELECT COUNT (*) FROM [LecturesDetails] ", connection);
             textBoxTotLec.Text = cmd.ExecuteScalar().ToString();
             connection.Close();
 

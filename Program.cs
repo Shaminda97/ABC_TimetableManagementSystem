@@ -18,7 +18,7 @@ namespace ABC_TimetableManagementSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-           //Application.Run(new addSuitableRoom());
+           // Application.Run(new addSuitableRoom());
         }
     }
 }
