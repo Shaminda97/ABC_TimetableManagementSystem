@@ -86,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ABC_databaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ABC_databaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABC_databaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AddSession\addSession.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +109,12 @@
     <Compile Include="GenarateTimetable\genarateTimetable.Designer.cs">
       <DependentUpon>genarateTimetable.cs</DependentUpon>
     </Compile>
+    <Compile Include="session2\lecture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="session2\lecture.Designer.cs">
+      <DependentUpon>lecture.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocationManagement\addSuitableRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +126,12 @@
     </Compile>
     <Compile Include="LocationManagement\locationManagement.Designer.cs">
       <DependentUpon>locationManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="session2\manage session.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="session2\manage session.Designer.cs">
+      <DependentUpon>manage session.cs</DependentUpon>
     </Compile>
     <Compile Include="NotAvailableTime\notAvailableTime.cs">
       <SubType>Form</SubType>
@@ -135,6 +152,12 @@
     </Compile>
     <Compile Include="Statistics\statistics.Designer.cs">
       <DependentUpon>statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="session2\subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="session2\subject.Designer.cs">
+      <DependentUpon>subject.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkingDays\workingDays.cs">
       <SubType>Form</SubType>
@@ -173,6 +196,15 @@
     <EmbeddedResource Include="ReservedHall\reservedHall.resx">
       <DependentUpon>reservedHall.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="session2\lecture.resx">
+      <DependentUpon>lecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="session2\manage session.resx">
+      <DependentUpon>manage session.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="session2\subject.resx">
+      <DependentUpon>subject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Statistics\statistics.resx">
       <DependentUpon>statistics.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +221,17 @@
     </None>
     <None Include="ABC_databaseDataSet.xss">
       <DependentUpon>ABC_databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ABC_databaseDataSet1.xsc">
+      <DependentUpon>ABC_databaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ABC_databaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABC_databaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABC_databaseDataSet1.xss">
+      <DependentUpon>ABC_databaseDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -212,6 +255,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ABC_database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\WhatsApp Image 2021-03-28 at 14.27.27 %281%29.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-03-28 at 14.27.27.jpeg" />
     <None Include="Resources\icons8-back-arrow-64.png" />
   </ItemGroup>
   <ItemGroup>

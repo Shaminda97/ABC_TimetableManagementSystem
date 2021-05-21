@@ -69,5 +69,25 @@ namespace ABC_TimetableManagementSystem.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_03_28_at_14_27_27 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-03-28 at 14.27.27", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_03_28_at_14_27_27__1_ {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-03-28 at 14.27.27 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
