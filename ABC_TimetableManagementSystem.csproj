@@ -92,6 +92,12 @@
     <Compile Include="AddSession\addSession.Designer.cs">
       <DependentUpon>addSession.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nnt Available Time Session\Consecetive sessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nnt Available Time Session\Consecetive sessions.designer.cs">
+      <DependentUpon>Consecetive sessions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,24 @@
     </Compile>
     <Compile Include="GenarateTimetable\genarateTimetable.Designer.cs">
       <DependentUpon>genarateTimetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate Time table\Generate Time Table-Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generate Time table\Generate Time Table-Student.designer.cs">
+      <DependentUpon>Generate Time Table-Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate Time table\Generate Time Tables-Lecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generate Time table\Generate Time Tables-Lecturer.designer.cs">
+      <DependentUpon>Generate Time Tables-Lecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate Time table\Generate Time Tables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generate Time table\Generate Time Tables.designer.cs">
+      <DependentUpon>Generate Time Tables.cs</DependentUpon>
     </Compile>
     <Compile Include="LocationManagement\addSuitableRoom.cs">
       <SubType>Form</SubType>
@@ -116,11 +140,41 @@
     <Compile Include="LocationManagement\locationManagement.Designer.cs">
       <DependentUpon>locationManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage Students\Manage Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Students\Manage Students.designer.cs">
+      <DependentUpon>Manage Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Tags\Manage Tags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Tags\Manage Tags.designer.cs">
+      <DependentUpon>Manage Tags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nnt Available Time Session\Non Available Times.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nnt Available Time Session\Non Available Times.designer.cs">
+      <DependentUpon>Non Available Times.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nnt Available Time Session\NonOverlapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nnt Available Time Session\NonOverlapping.designer.cs">
+      <DependentUpon>NonOverlapping.cs</DependentUpon>
+    </Compile>
     <Compile Include="NotAvailableTime\notAvailableTime.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NotAvailableTime\notAvailableTime.Designer.cs">
       <DependentUpon>notAvailableTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nnt Available Time Session\Parallel sessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nnt Available Time Session\Parallel sessions.designer.cs">
+      <DependentUpon>Parallel sessions.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,11 +199,23 @@
     <EmbeddedResource Include="AddSession\addSession.resx">
       <DependentUpon>addSession.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Nnt Available Time Session\Consecetive sessions.resx">
+      <DependentUpon>Consecetive sessions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenarateTimetable\genarateTimetable.resx">
       <DependentUpon>genarateTimetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate Time table\Generate Time Table-Student.resx">
+      <DependentUpon>Generate Time Table-Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate Time table\Generate Time Tables-Lecturer.resx">
+      <DependentUpon>Generate Time Tables-Lecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate Time table\Generate Time Tables.resx">
+      <DependentUpon>Generate Time Tables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocationManagement\addSuitableRoom.resx">
       <DependentUpon>addSuitableRoom.cs</DependentUpon>
@@ -157,8 +223,23 @@
     <EmbeddedResource Include="LocationManagement\locationManagement.resx">
       <DependentUpon>locationManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manage Students\Manage Students.resx">
+      <DependentUpon>Manage Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Tags\Manage Tags.resx">
+      <DependentUpon>Manage Tags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nnt Available Time Session\Non Available Times.resx">
+      <DependentUpon>Non Available Times.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nnt Available Time Session\NonOverlapping.resx">
+      <DependentUpon>NonOverlapping.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NotAvailableTime\notAvailableTime.resx">
       <DependentUpon>notAvailableTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nnt Available Time Session\Parallel sessions.resx">
+      <DependentUpon>Parallel sessions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -205,13 +286,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ABC_database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ABC_database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ABC_database.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\icons8-back-arrow-64.png" />
   </ItemGroup>
   <ItemGroup>
