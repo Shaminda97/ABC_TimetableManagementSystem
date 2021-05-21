@@ -288,6 +288,7 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.roomsTableDataGridView.DataSource = this.roomsTableBindingSource;
             this.roomsTableDataGridView.Location = new System.Drawing.Point(235, 128);
             this.roomsTableDataGridView.Name = "roomsTableDataGridView";
+            this.roomsTableDataGridView.ReadOnly = true;
             this.roomsTableDataGridView.Size = new System.Drawing.Size(542, 310);
             this.roomsTableDataGridView.TabIndex = 30;
             // 
@@ -303,24 +304,28 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Building_Name";
             this.dataGridViewTextBoxColumn2.HeaderText = "Building_Name";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Room_Number";
             this.dataGridViewTextBoxColumn3.HeaderText = "Room_Number";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "RoomType";
             this.dataGridViewTextBoxColumn4.HeaderText = "RoomType";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Capacity";
             this.dataGridViewTextBoxColumn5.HeaderText = "Capacity";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // roomsTableTableAdapter
             // 
@@ -328,9 +333,23 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.AddaSessionTableTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.LecturerTableTableAdapter = null;
+            this.tableAdapterManager.LecturesDetailsTableAdapter = null;
+            this.tableAdapterManager.ManageSessionTableTableAdapter = null;
+            this.tableAdapterManager.NonAvaiableTimesTableTableAdapter = null;
+            this.tableAdapterManager.NonOverLappingTableTableAdapter = null;
+            this.tableAdapterManager.NotAvailableTimesTableAdapter = null;
+            this.tableAdapterManager.NotAvailabliTimesTableAdapter = null;
+            this.tableAdapterManager.ParallelSessionTableTableAdapter = null;
+            this.tableAdapterManager.ReservedHallArrangementTableTableAdapter = null;
             this.tableAdapterManager.RoomsTableTableAdapter = this.roomsTableTableAdapter;
+            this.tableAdapterManager.StudentTableTableAdapter = null;
+            this.tableAdapterManager.SubjectTableTableAdapter = null;
+            this.tableAdapterManager.SuitableTableTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.WorkingDaysandHoursTableTableAdapter = null;
             // 
             // roomTypeComboBox
             // 

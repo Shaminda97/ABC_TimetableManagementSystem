@@ -229,13 +229,23 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.AddaSessionTableTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.LecturerTableTableAdapter = null;
+            this.tableAdapterManager.LecturesDetailsTableAdapter = null;
+            this.tableAdapterManager.ManageSessionTableTableAdapter = null;
+            this.tableAdapterManager.NonAvaiableTimesTableTableAdapter = null;
+            this.tableAdapterManager.NonOverLappingTableTableAdapter = null;
+            this.tableAdapterManager.NotAvailableTimesTableAdapter = null;
+            this.tableAdapterManager.NotAvailabliTimesTableAdapter = null;
+            this.tableAdapterManager.ParallelSessionTableTableAdapter = null;
+            this.tableAdapterManager.ReservedHallArrangementTableTableAdapter = null;
             this.tableAdapterManager.RoomsTableTableAdapter = null;
             this.tableAdapterManager.StudentTableTableAdapter = null;
             this.tableAdapterManager.SubjectTableTableAdapter = null;
             this.tableAdapterManager.SuitableTableTableAdapter = this.suitableTableTableAdapter;
             this.tableAdapterManager.UpdateOrder = ABC_TimetableManagementSystem.ABC_databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.WorkingDaysandHoursTableTableAdapter = null;
             // 
             // subjectTextBox
             // 
@@ -277,6 +287,7 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.suitableTableDataGridView.DataSource = this.suitableTableBindingSource;
             this.suitableTableDataGridView.Location = new System.Drawing.Point(241, 125);
             this.suitableTableDataGridView.Name = "suitableTableDataGridView";
+            this.suitableTableDataGridView.ReadOnly = true;
             this.suitableTableDataGridView.Size = new System.Drawing.Size(544, 279);
             this.suitableTableDataGridView.TabIndex = 29;
             // 
@@ -292,24 +303,28 @@ namespace ABC_TimetableManagementSystem.LocationManagement
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Subject";
             this.dataGridViewTextBoxColumn2.HeaderText = "Subject";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Tag";
             this.dataGridViewTextBoxColumn3.HeaderText = "Tag";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "SuitableRoom";
             this.dataGridViewTextBoxColumn4.HeaderText = "SuitableRoom";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "GroupID";
             this.dataGridViewTextBoxColumn5.HeaderText = "GroupID";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // tagComboBox
             // 
