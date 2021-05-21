@@ -2448,6 +2448,8 @@ namespace ABC_TimetableManagementSystem {
             
             private global::System.Data.DataColumn columnHallNo;
             
+            private global::System.Data.DataColumn columnLecturer;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public AddaSessionTableDataTable() {
@@ -2523,6 +2525,14 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LecturerColumn {
+                get {
+                    return this.columnLecturer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2558,14 +2568,15 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AddaSessionTableRow AddAddaSessionTableRow(string GroupID, System.TimeSpan StartTime, System.TimeSpan EndTime, string HallNo) {
+            public AddaSessionTableRow AddAddaSessionTableRow(string GroupID, System.TimeSpan StartTime, System.TimeSpan EndTime, string HallNo, string Lecturer) {
                 AddaSessionTableRow rowAddaSessionTableRow = ((AddaSessionTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         GroupID,
                         StartTime,
                         EndTime,
-                        HallNo};
+                        HallNo,
+                        Lecturer};
                 rowAddaSessionTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAddaSessionTableRow);
                 return rowAddaSessionTableRow;
@@ -2600,6 +2611,7 @@ namespace ABC_TimetableManagementSystem {
                 this.columnStartTime = base.Columns["StartTime"];
                 this.columnEndTime = base.Columns["EndTime"];
                 this.columnHallNo = base.Columns["HallNo"];
+                this.columnLecturer = base.Columns["Lecturer"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2615,6 +2627,8 @@ namespace ABC_TimetableManagementSystem {
                 base.Columns.Add(this.columnEndTime);
                 this.columnHallNo = new global::System.Data.DataColumn("HallNo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHallNo);
+                this.columnLecturer = new global::System.Data.DataColumn("Lecturer", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLecturer);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -5138,6 +5152,8 @@ namespace ABC_TimetableManagementSystem {
             
             private global::System.Data.DataColumn columnWorkingTimePerDays;
             
+            private global::System.Data.DataColumn columnEmployeeID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public WorkingDaysandHoursTableDataTable() {
@@ -5205,6 +5221,14 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EmployeeIDColumn {
+                get {
+                    return this.columnEmployeeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5240,13 +5264,14 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public WorkingDaysandHoursTableRow AddWorkingDaysandHoursTableRow(int NoOfWorkingDays, string WorkingDays, System.TimeSpan WorkingTimePerDays) {
+            public WorkingDaysandHoursTableRow AddWorkingDaysandHoursTableRow(int NoOfWorkingDays, string WorkingDays, System.TimeSpan WorkingTimePerDays, string EmployeeID) {
                 WorkingDaysandHoursTableRow rowWorkingDaysandHoursTableRow = ((WorkingDaysandHoursTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         NoOfWorkingDays,
                         WorkingDays,
-                        WorkingTimePerDays};
+                        WorkingTimePerDays,
+                        EmployeeID};
                 rowWorkingDaysandHoursTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowWorkingDaysandHoursTableRow);
                 return rowWorkingDaysandHoursTableRow;
@@ -5280,6 +5305,7 @@ namespace ABC_TimetableManagementSystem {
                 this.columnNoOfWorkingDays = base.Columns["NoOfWorkingDays"];
                 this.columnWorkingDays = base.Columns["WorkingDays"];
                 this.columnWorkingTimePerDays = base.Columns["WorkingTimePerDays"];
+                this.columnEmployeeID = base.Columns["EmployeeID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5293,6 +5319,8 @@ namespace ABC_TimetableManagementSystem {
                 base.Columns.Add(this.columnWorkingDays);
                 this.columnWorkingTimePerDays = new global::System.Data.DataColumn("WorkingTimePerDays", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWorkingTimePerDays);
+                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -6405,6 +6433,22 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Lecturer {
+                get {
+                    try {
+                        return ((string)(this[this.tableAddaSessionTable.LecturerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Lecturer\' in table \'AddaSessionTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAddaSessionTable.LecturerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsGroupIDNull() {
                 return this.IsNull(this.tableAddaSessionTable.GroupIDColumn);
             }
@@ -6449,6 +6493,18 @@ namespace ABC_TimetableManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetHallNoNull() {
                 this[this.tableAddaSessionTable.HallNoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLecturerNull() {
+                return this.IsNull(this.tableAddaSessionTable.LecturerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLecturerNull() {
+                this[this.tableAddaSessionTable.LecturerColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7723,6 +7779,22 @@ namespace ABC_TimetableManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string EmployeeID {
+                get {
+                    try {
+                        return ((string)(this[this.tableWorkingDaysandHoursTable.EmployeeIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EmployeeID\' in table \'WorkingDaysandHoursTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWorkingDaysandHoursTable.EmployeeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNoOfWorkingDaysNull() {
                 return this.IsNull(this.tableWorkingDaysandHoursTable.NoOfWorkingDaysColumn);
             }
@@ -7755,6 +7827,18 @@ namespace ABC_TimetableManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWorkingTimePerDaysNull() {
                 this[this.tableWorkingDaysandHoursTable.WorkingTimePerDaysColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEmployeeIDNull() {
+                return this.IsNull(this.tableWorkingDaysandHoursTable.EmployeeIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEmployeeIDNull() {
+                this[this.tableWorkingDaysandHoursTable.EmployeeIDColumn] = global::System.Convert.DBNull;
             }
         }
         

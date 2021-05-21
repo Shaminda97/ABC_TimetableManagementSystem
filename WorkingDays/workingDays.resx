@@ -117,8 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8-back-arrow-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-back-arrow-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="noOfWorkingDaysLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="workingDaysLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="workingTimePerDaysLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="employeeIDLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAiJJREFUSEul
+        lc1O20AQxxfOpa9CP16Aq+2COFEQL1DadyihID6utGvDIXCoxAXRIwdip5CiSqhSi5AQIKA4VUtIpVYC
+        JDhAvMxsNmq8O3ZM+pd+suyd/Y+8O7vDWkqIDqfoPrV995Xj8ze2z+fwCbzsDd49UVHtyVqdfWj57hiY
+        lwGRQtku8FzfZr5LTc0my/eG7cD9TRimUbUDPqQskpXL5Tpt35shDLIT8Cn0UZam/jvBPyaVZVxyiegJ
+        7RA5vjeorOvCTYOqOSOCYwys54VDfCeBPcXiUSnwL2QV0cGK98dbIooisfP3l3ACj4wxCLzRegY4B/Dh
+        hxHQxNL3L6KhCBgqLZJxBCH6M3XQqABJcwLUcviVjEtkjT9ieHLJQUBP8KG8TcalErgvmFXwJqjB/OFn
+        Zd1at1FNFCsHhgeCVxBzAtelBsPLP8oiu/qL84YP+jP4nXF9AJndW5eb3Kyz6wtRuTo3OAVWyt8MDwQr
+        N3VP3mqJ1k73spdvA9wTvK7JQcX8wWYs0erPXTIuiWfFuW55VODlRB9sRk80uLFAxhGEMgEK+wEREIPv
+        l8RNrSY+VY/IcQq4gl6rFIz1fOQPstxdme+tOlWjkWHDIQLbJbIL3oCyjgvKbZqYcG/wgCtLU7IzQmeD
+        wEifmBGcN5naGRuyfP48yx5pVBKXKEmyGKAfwORQM9M5wSrCeDW1PcEaPwZGZHMruB4+8V1e4y3F2B2t
+        a0wrFfV+CgAAAABJRU5ErkJggg==
+</value>
   </data>
+  <metadata name="workingDaysandHoursTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 17</value>
+  </metadata>
+  <metadata name="aBC_databaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="workingDaysandHoursTableTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>470, 17</value>
+  </metadata>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>747, 17</value>
+  </metadata>
 </root>

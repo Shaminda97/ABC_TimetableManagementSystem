@@ -78,10 +78,19 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABC_databaseDataSet.cs">
+      <DependentUpon>ABC_databaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ABC_databaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ABC_databaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AddSession\addSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSession\addSession.Designer.cs">
+      <DependentUpon>addSession.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -107,14 +116,35 @@
     <Compile Include="LocationManagement\locationManagement.Designer.cs">
       <DependentUpon>locationManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotAvailableTime\notAvailableTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotAvailableTime\notAvailableTime.Designer.cs">
+      <DependentUpon>notAvailableTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservedHall\reservedHall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservedHall\reservedHall.Designer.cs">
+      <DependentUpon>reservedHall.cs</DependentUpon>
+    </Compile>
     <Compile Include="Statistics\statistics.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Statistics\statistics.Designer.cs">
       <DependentUpon>statistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkingDays\workingDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingDays\workingDays.Designer.cs">
+      <DependentUpon>workingDays.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddSession\addSession.resx">
+      <DependentUpon>addSession.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +157,9 @@
     <EmbeddedResource Include="LocationManagement\locationManagement.resx">
       <DependentUpon>locationManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NotAvailableTime\notAvailableTime.resx">
+      <DependentUpon>notAvailableTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -135,9 +168,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReservedHall\reservedHall.resx">
+      <DependentUpon>reservedHall.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Statistics\statistics.resx">
       <DependentUpon>statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingDays\workingDays.resx">
+      <DependentUpon>workingDays.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ABC_databaseDataSet.xsc">
       <DependentUpon>ABC_databaseDataSet.xsd</DependentUpon>
@@ -172,6 +212,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ABC_database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\icons8-back-arrow-64.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -185,5 +226,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
